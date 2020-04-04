@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Suspense} from 'react';
+import Bar from './container/header';
+import Intro from "./container/intro";
+import About from "./container/about";
+import Service from "./container/service";
+import Portfolio  from "./container/portfolio";
+import Curriculum from "./container/curriculum";
+import Contact from "./container/contact";
+import Loader from "./component/loader";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      
+      <Bar />
+      <Intro />
+      <About />
+      <Curriculum />
+      <Portfolio />
+      <Service />
+      <Contact />
+     
+    </Suspense>
   );
 }
 

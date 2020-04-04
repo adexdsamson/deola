@@ -1,0 +1,159 @@
+
+#services {
+	background: #313131 url(/images/bg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	color: white;
+	position: relative;
+}
+#services .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #151515;
+	opacity: .9;
+}
+
+#services .section-intro {
+	margin-bottom: 1.8rem;
+}
+
+#services .section-intro h1 {
+	color: white;
+}
+#services .section-intro h5 {
+	color: green;
+}
+#services .section-intro p {
+	color: rgba(255, 255, 255, 0.7);
+}
+.services-content {
+	max-width: 1200px;
+	
+}
+.services-list {
+	margin-top: 1.2rem;
+	text-align: center;
+}
+.services-list .service {
+	margin-bottom: 1.2rem;
+	padding: 0 30px;
+}
+.services-list .icon {
+	display: inline-block;
+	margin-bottom: 2.1rem;
+}
+.services-list .icon i {
+	font-size: 5.4rem;
+	color: green;
+}
+.services-list h3 {
+	color: #FFFFFF;
+}
+.services-list .desc {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.gtco-card-item .gtco-text {
+	padding: 0px 10px 10px 20px;
+	text-align: center;
+  }
+  .gtco-card-item .gtco-text.text-left {
+	text-align: left;
+  }
+  .gtco-card-item .gtco-text h2, .gtco-card-item .gtco-text span {
+	text-decoration: none !important;
+  }
+  .gtco-card-item .gtco-text h2 {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 0 0 10px 0;
+	color: #66D37E;
+  }
+  .gtco-card-item .gtco-text span {
+	color: #b3b3b3;
+	font-size: 16px;
+	font-weight: 400;
+  }
+  .gtco-card-item .gtco-text p {
+	color: #000;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+  }
+  .gtco-card-item .gtco-text span.btn {
+	color: #666666 !important;
+	opacity: 1;
+	visibility: visible;
+	bottom: 0;
+	background: #ebebeb;
+	border: 2px solid #ebebeb !important;
+	position: relative;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+  }
+  .gtco-card-item .gtco-text .gtco-category {
+	font-size: 12px;
+	color: #cccccc;
+  }
+  .gtco-card-item .gtco-text .gtco-category span {
+	font-size: 12px;
+	color: gray;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+  }
+  .gtco-card-item:hover, .gtco-card-item:focus {
+	bottom: 7px;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+	-ms-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+	-o-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+	box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.19);
+  }
+  .gtco-card-item:hover img, .gtco-card-item:focus img {
+	-webkot-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+  }
+  .gtco-card-item:hover span.btn, .gtco-card-item:focus span.btn {
+	opacity: 1;
+	visibility: visible;
+	bottom: 0px;
+	color: #fff !important;
+	border: 2px solid #7ad98f !important;
+	background: #7ad98f !important;
+  }
+  
+.gtco-card-item {
+	display: block;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	z-index: 9;
+	bottom: 0;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+	-ms-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+	-o-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
