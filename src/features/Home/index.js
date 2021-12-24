@@ -3,7 +3,7 @@ import Avatar from "./layouts/avatar";
 
 const Homepage = () => {
   return (
-    <div className="h-screen overflow-hidden">
+    <section className="h-screen overflow-hidden">
       <div className="h-full bg-black"></div>
       <div className="h-full bg-green-400 absolute top-0 w-72 z-10 skew-x-6 -left-9 rounded-md"></div>
       <div className="absolute top-0 h-full w-full z-50 flex items-center px-8">
@@ -27,15 +27,15 @@ const Homepage = () => {
             me.
           </Typography>
 
-          <div className="h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-green-600 mt-4 hover:bg-green-600">
-            <Typography variant='small' uppercase className="text-white/60 ml-5">
+          <div className="h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-green-600 mt-4 hover:bg-green-600 border-r-0">
+            <Typography variant='small' uppercase className="text-white/60 ml-9">
               more about me
             </Typography>
-            <div className="h-10 w-10 rounded-full cursor-pointer absolute right-0 top-0.5 bg-green-600"></div>
+            <div className="h-11 w-11 rounded-full cursor-pointer absolute right-0 top-0.5 bg-green-600"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

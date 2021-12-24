@@ -17,8 +17,8 @@ const variantsMapping = {
 
 const fontSizeVariantMapping = {
   h1: "text-5xl",
-  h2: "",
-  h3: "",
+  h2: "text-4xl",
+  h3: "text-3xl",
   h4: "text-2xl",
   h5: "text-xl",
   h6: "text-lg font-bold",
