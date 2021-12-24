@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { Typography } from "../../common/shared";
+import Carousel from "./layout/Slider";
+import Sparsed from './layout/Sparsed';
 // import { BusinessCenter, School } from '@material-ui/icons';
 
 const BackgroundExperience = () => {
@@ -11,7 +13,7 @@ const BackgroundExperience = () => {
       position: "Sound Engineer",
       content:
         "Coordinate a team of technical sound engineers, to provide an excellent sound to the church",
-      duration: "July 2014 - 2018 ",
+      duration: "2014 - 2018 ",
       // icon: <BusinessCenter />
     },
     {
@@ -27,7 +29,7 @@ const BackgroundExperience = () => {
       position: "Internship",
       content:
         "Assisted in reading, calculate and measuring the current state of weather and also predicting the weather outcomes.",
-      duration: "05 May 2018 - 05 Oct 2018",
+      duration: "2018 - 2018",
       // icon: <BusinessCenter />
     },
     {
@@ -35,17 +37,17 @@ const BackgroundExperience = () => {
       position: "Internship",
       content:
         "Assisted in developing the company's client website and also design some website with figma",
-      duration: "1 Sept 2021 - 20 Nov 2022",
+      duration: "2021 - 2022",
       // icon: <BusinessCenter />
     },
     {
       company: "Federal University of Agriculture, Abeokuta",
       position: "Bachelor Degree",
       content: "Studied Physics in Federal University of Agriculture Abeokuta.",
-      duration: "December 2014 - June 2018",
+      duration: "2014 - 2018",
       // icon: <School />
     },
-    // { company: "", position: "", content: "", duration: "" },
+    { company: "Pottershub network", position: "Team lead", content: "", duration: "2022 - present" },
     // { company: "", position: "", content: "", duration: "" },
   ];
   return (
@@ -62,27 +64,36 @@ const BackgroundExperience = () => {
       </div>
       <div className="flex items-center justify-center mt-2">
         <Typography
-          variant={"body1"}
-          className={`mx-1 ${
-            activeTab === "carousel" && "border-b-2 p-2 border-green-400"
-          } cursor-pointer`}
-          color={"white"}
-          onClick={() => setActtiveTab('carousel')}
+          {...{
+            variant: "body1",
+            className: `mx-1 ${
+              activeTab === "carousel" &&
+              "border-b-2 p-2 border-green-400 font-bold"
+            } cursor-pointer hover:text-green-400`,
+            color: "white",
+            onClick: () => setActtiveTab("carousel"),
+          }}
         >
           Carousel
         </Typography>
         <Typography
-          variant={"body1"}
-          className={`mx-1 ${
-            activeTab === "sparsed" && "border-b-2 p-2 border-green-400"
-          } cursor-pointer`}
-          color={"white"}
-          onClick={() => setActtiveTab('sparsed')}
+          {...{
+            variant: "body1",
+            className: `mx-1 ${
+              activeTab === "sparsed" &&
+              "border-b-2 p-2 border-green-400 font-bold"
+            } cursor-pointer hover:text-green-400`,
+            color: "white",
+            onClick: () => setActtiveTab("sparsed"),
+          }}
         >
-          Scattered
+          Sparse
         </Typography>
       </div>
-      <div className="grid grid-cols-1 gap-10 mt-14 px-20"></div>
+      <div className="grid grid-cols-1 gap-10 mt-14 px-20">
+        {activeTab === "carousel" && <Carousel {...{ data }} />}
+        {activeTab === "sparsed" && <Sparsed {...{ data }} />}
+      </div>
     </div>
   );
 };

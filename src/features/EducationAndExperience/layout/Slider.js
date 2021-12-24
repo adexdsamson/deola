@@ -15,9 +15,9 @@ const SliderComponent = ({ data }) => {
                 </div>
                 <div className="pl-3">
                   <div className="font-medium">{company}</div>
-                  <div className="flex py-1">
+                  <div className="flex py-1 items-center">
                     <div className="text-gray-600 text-sm">{position} -</div>
-                    <div className="text-gray-600 text-sm ml-1">{duration}</div>
+                    <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">{duration}</div>
                   </div>
                 </div>
               </div>
