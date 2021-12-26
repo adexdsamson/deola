@@ -1,4 +1,4 @@
-import { Typography } from "../../common/shared";
+import { Button, Typography } from "../../common/shared";
 import Avatar from "./layouts/avatar";
 
 const Homepage = () => {
@@ -27,12 +27,7 @@ const Homepage = () => {
             me.
           </Typography>
 
-          <div className="h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-green-600 mt-4 hover:bg-green-600 border-r-0">
-            <Typography variant='small' uppercase className="text-white/60 ml-9">
-              more about me
-            </Typography>
-            <div className="h-11 w-11 rounded-full cursor-pointer absolute right-0 top-0.5 bg-green-600"></div>
-          </div>
+          <Button text="more about me" className={'mt-4'} />
         </div>
       </div>
     </section>

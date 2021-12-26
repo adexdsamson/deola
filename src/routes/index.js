@@ -6,7 +6,8 @@ import {
   Skills,
   BackgroundExperience,
   Portfolio,
-  ContactUs
+  ContactUs,
+  Blog
 } from "../features";
 import {
   HOME_ROUTE,
@@ -14,7 +15,8 @@ import {
   SKILLS_ROUTE,
   BACKGROUND_ROUTE,
   PORTFOLIO_ROUTE,
-  CONTACT_US_ROUTE
+  CONTACT_US_ROUTE,
+  BLOG_ROUTE
 } from "./constant";
 
 const RouteComponent = () => {
@@ -27,6 +29,7 @@ const RouteComponent = () => {
         <Route path={BACKGROUND_ROUTE} element={<BackgroundExperience />} />
         <Route path={PORTFOLIO_ROUTE} element={<Portfolio />} />
         <Route path={CONTACT_US_ROUTE} element={<ContactUs />} />
+        <Route path={BLOG_ROUTE} element={<Blog />} />
       </Routes>
     </Layout>
   );

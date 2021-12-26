@@ -4,3 +4,4 @@ export const SKILLS_ROUTE = '/skills';
 export const BACKGROUND_ROUTE = '/background-experience';
 export const PORTFOLIO_ROUTE = '/portfolios';
 export const CONTACT_US_ROUTE = '/contact-us';
+export const BLOG_ROUTE = '/blogs'
