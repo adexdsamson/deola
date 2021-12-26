@@ -23,13 +23,13 @@ const Skills = () => {
         <Typography
           variant="h2"
           color="white"
-          className={"font-bold text-6xl"}
+          className={"font-bold"}
           uppercase
         >
           My <span className="text-green-400">Skills</span>
         </Typography>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-10 mt-14 px-20">
+      <div className="flex flex-wrap items-center justify-center gap-10 mt-10 px-20">
         {data.map(({ skill, progress }, i) => (
           <div key={i} className="h-32 w-32 text-center my-10">
             <CircularProgressbar

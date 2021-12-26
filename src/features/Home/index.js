@@ -12,11 +12,11 @@ const Homepage = () => {
           <Typography
             variant="h1"
             // color='white'
-            className="before:content-[''] before:absolute before:-left-14 before:top-5 before:h-1 before:w-10 before:rounded before:bg-green-400 relative font-bold text-green-400"
+            className="before:content-[''] before:absolute before:-left-14 before:top-8 before:h-1 before:w-10 before:rounded before:bg-green-400 relative font-bold text-green-400"
           >
             {" "}
             I'M ADEOLA ADEDIRAN.
-            <span className="block uppercase text-5xl mt-2 text-white/90">
+            <span className="block uppercase text-5xl text-white/90">
               web developer
             </span>
           </Typography>

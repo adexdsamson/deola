@@ -21,7 +21,7 @@ const About = () => {
         <Typography
           variant="h2"
           color="white"
-          className={"font-bold text-6xl"}
+          className={"font-bold"}
           uppercase
         >
           About <span className="text-green-400">Me</span>
