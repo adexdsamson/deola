@@ -10,9 +10,39 @@ const BlogSection = () => {
       title: "Noteworthy technology acquisitions 2021",
       body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
     },
+    {
+      src: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      link: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      title: "Noteworthy technology acquisitions 2021",
+      body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    },
+    {
+      src: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      link: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      title: "Noteworthy technology acquisitions 2021",
+      body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    },
+    {
+      src: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      link: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      title: "Noteworthy technology acquisitions 2021",
+      body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    },
+    {
+      src: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      link: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      title: "Noteworthy technology acquisitions 2021",
+      body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    },
+    {
+      src: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      link: "https://flowbite.com/docs/images/blog/image-1.jpg",
+      title: "Noteworthy technology acquisitions 2021",
+      body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    },
   ];
   return (
-    <div className="h-screen overflow-x-hidden overflow-y-auto bg-black">
+    <div className="h-screen overflow-x-hidden scrollbar-hide bg-black ">
       <div className="text-center mt-20">
         <Typography
           variant="h2"

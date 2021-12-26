@@ -26,7 +26,7 @@ const ContactUs = () => {
           <Typography
             variant={"body2"}
             color="white"
-            className={"font-bold text-opacity-60 mt-2 leading-5"}
+            className={"text-opacity-60 mt-2 leading-5"}
           >
             Feel free to get in touch with me. I am always open to discussing
             new projects, creative ideas or opportunities to be part of your
