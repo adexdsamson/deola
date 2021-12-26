@@ -107,9 +107,14 @@ const ContactUs = () => {
               <Input placeholder="Your name" />
               <Input placeholder="your email" />
             </div>
-            <Input className="mb-10" placeholder="Your name" />
-            <Input variant="textarea" className="rounded-2xl mb-10" placeholder="your message" rows={6} />
-            <Button  text="send message" />
+            <Input className="mb-10" placeholder="subject" />
+            <Input
+              variant="textarea"
+              className="rounded-2xl mb-10"
+              placeholder="your message"
+              rows={6}
+            />
+            <Button text="send message" />
           </form>
         </div>
       </div>
