@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { Typography } from "../../common/shared";
 import Carousel from "./layout/Slider";
-import Sparsed from './layout/Sparsed';
-// import { BusinessCenter, School } from '@material-ui/icons';
+import Sparsed from "./layout/Sparsed";
+import { HandIcon, BookOpenIcon } from "@heroicons/react/solid";
 
 const BackgroundExperience = () => {
   let [activeTab, setActtiveTab] = useState("carousel");
@@ -14,7 +14,7 @@ const BackgroundExperience = () => {
       content:
         "Coordinate a team of technical sound engineers, to provide an excellent sound to the church",
       duration: "2014 - 2018 ",
-      // icon: <BusinessCenter />
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "FIIRO",
@@ -22,7 +22,7 @@ const BackgroundExperience = () => {
       content:
         "Assisted with the processing of foodstuffs into granular and preserved state.",
       duration: "6 months",
-      // icon: <BusinessCenter />
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "NIMET",
@@ -30,7 +30,7 @@ const BackgroundExperience = () => {
       content:
         "Assisted in reading, calculate and measuring the current state of weather and also predicting the weather outcomes.",
       duration: "2018 - 2018",
-      // icon: <BusinessCenter />
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Alabian Solutions",
@@ -38,16 +38,22 @@ const BackgroundExperience = () => {
       content:
         "Assisted in developing the company's client website and also design some website with figma",
       duration: "2021 - 2022",
-      // icon: <BusinessCenter />
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Federal University of Agriculture, Abeokuta",
       position: "Bachelor Degree",
       content: "Studied Physics in Federal University of Agriculture Abeokuta.",
       duration: "2014 - 2018",
-      // icon: <School />
+      icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
     },
-    { company: "Pottershub network", position: "Team lead", content: "", duration: "2022 - present" },
+    {
+      company: "Pottershub network",
+      position: "Team lead",
+      content: "",
+      duration: "2022 - present",
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
+    },
     // { company: "", position: "", content: "", duration: "" },
   ];
   return (
@@ -66,10 +72,10 @@ const BackgroundExperience = () => {
         <Typography
           {...{
             variant: "body1",
-            className: `mx-1 ${
+            className: `transition ease-in-out mx-1 ${
               activeTab === "carousel" &&
               "border-b-2 p-2 border-green-400 font-bold"
-            } cursor-pointer hover:text-green-400`,
+            } cursor-pointer hover:text-green-400 duration-300`,
             color: "white",
             onClick: () => setActtiveTab("carousel"),
           }}
@@ -79,10 +85,10 @@ const BackgroundExperience = () => {
         <Typography
           {...{
             variant: "body1",
-            className: `mx-1 ${
+            className: `transition ease-in-out mx-1 ${
               activeTab === "sparsed" &&
               "border-b-2 p-2 border-green-400 font-bold"
-            } cursor-pointer hover:text-green-400`,
+            } cursor-pointer hover:text-green-400 duration-300`,
             color: "white",
             onClick: () => setActtiveTab("sparsed"),
           }}

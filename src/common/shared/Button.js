@@ -17,12 +17,13 @@ const Button = ({
       <Typography
         variant="small"
         uppercase
-        className={`text-white/80 ml-9 ${textClassName}`}
+        color={'defaultBody'}
+        className={`ml-9 ${textClassName}`}
       >
         {text}
       </Typography>
       <div
-        className={`h-11 w-11 rounded-full cursor-pointer absolute right-0 top-0.5 bg-green-600 ${iconClassName}`}
+        className={`h-11 w-11 rounded-full cursor-pointer flex items-center justify-center absolute right-0 top-0.5 bg-green-600 hover:drop-shadow-lg ${iconClassName}`}
       >
         {icon}
       </div>

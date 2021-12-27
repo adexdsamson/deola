@@ -1,6 +1,25 @@
 import { Button, Input, Typography } from "../../common/shared";
+import { Link } from 'react-router-dom'
+import {
+  ArrowNarrowRightIcon,
+  MailIcon,
+  LocationMarkerIcon,
+  PhoneIcon,
+} from "@heroicons/react/solid";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 
 const ContactUs = () => {
+  let data = [
+    { icon: <FaFacebookF className="text-white h-4 w-4" />, link: 'https://www.facebook.com' },
+    { icon: <FaTwitter className="text-white h-4 w-4" />,  link: 'https://www.twitter.com' },
+    { icon: <FaLinkedinIn className="text-white h-4 w-4" />,  link: 'https://www.linkedin.com/' },
+    { icon: <FaInstagram className="text-white h-4 w-4" />,  link: 'https://www.instagram.com/' },
+  ];
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-black">
       <div className="text-center mt-20">
@@ -33,8 +52,10 @@ const ContactUs = () => {
             visions.
           </Typography>
           <div>
-            <div className="flex gap-7 mt-9">
-              <div className=" bg-orange-400"></div>
+            <div className="flex gap-5 mt-9">
+              <div className="">
+                <LocationMarkerIcon className="text-green-400 h-10 w-10" />
+              </div>
               <div>
                 <Typography
                   variant="subheader2"
@@ -53,8 +74,10 @@ const ContactUs = () => {
                 </Typography>
               </div>
             </div>
-            <div className="flex gap-7 mt-7">
-              <div className=" bg-orange-400"></div>
+            <div className="flex gap-5 mt-7">
+              <div className="">
+                <MailIcon className="text-green-400 h-10 w-10" />
+              </div>
               <div>
                 <Typography
                   variant="subheader2"
@@ -73,8 +96,10 @@ const ContactUs = () => {
                 </Typography>
               </div>
             </div>
-            <div className="flex gap-7 mt-7">
-              <div className=""></div>
+            <div className="flex gap-5 mt-7">
+              <div className="">
+                <PhoneIcon className="text-green-400 h-10 w-10" />
+              </div>
               <div>
                 <Typography
                   variant="subheader2"
@@ -95,10 +120,13 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="flex gap-3 mt-7 items-center">
-            <div className="w-8 h-8 bg-gray-700 rounded-full"></div>
-            <div className="w-8 h-8 bg-gray-700 rounded-full"></div>
-            <div className="w-8 h-8 bg-gray-700 rounded-full"></div>
-            <div className="w-8 h-8 bg-gray-700 rounded-full"></div>
+            {data.map((item, i) => (
+              <a href={item.link}>
+                <div key={i} className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-full">
+                {item.icon}
+              </div>
+              </a>
+            ))}
           </div>
         </div>
         <div className="h-full grow">
@@ -114,7 +142,10 @@ const ContactUs = () => {
               placeholder="your message"
               rows={6}
             />
-            <Button text="send message" />
+            <Button
+              text="send message"
+              icon={<ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />}
+            />
           </form>
         </div>
       </div>

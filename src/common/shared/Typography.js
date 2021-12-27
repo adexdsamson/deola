@@ -30,8 +30,8 @@ const fontSizeVariantMapping = {
 };
 
 const colorVariantMapping = {
-  defaultHeader: "text-gray-800",
-  defaultBody: "text-gray-600",
+  defaultHeader: "text-white/80",
+  defaultBody: "text-white/60",
   white: "text-white",
   danger: "text-red-400",
 };

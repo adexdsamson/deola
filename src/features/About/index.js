@@ -1,4 +1,5 @@
-import { Typography } from "../../common/shared";
+import { Button, Typography } from "../../common/shared";
+import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 
 const About = () => {
   let LeftData = [
@@ -81,19 +82,19 @@ const About = () => {
                 </div>
               ))}
             </div>
-
-            <div className="h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-green-600 mt-4 hover:bg-green-600 border-r-0">
-            <Typography variant='small' uppercase className="text-white/60 ml-9">
-              Download CV
-            </Typography>
-            <div className="h-11 w-11 rounded-full cursor-pointer absolute right-0 top-0.5 bg-green-600"></div>
-          </div>
+            <Button
+              text="Download CV"
+              className={"mt-4"}
+              icon={<ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />}
+            />
           </div>
         </div>
         <div className="pt-10">
           <div className="h-40 w-64 border border-gray-500 p-5 px-8 rounded">
             <Typography
-              className={"font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"}
+              className={
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"
+              }
               variant="h1"
             >
               4
@@ -110,7 +111,9 @@ const About = () => {
           </div>
           <div className="h-40 w-64 border float-right border-gray-500 mr-20 p-5 px-8 rounded">
             <Typography
-              className={"font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"}
+              className={
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"
+              }
               variant="h1"
             >
               10

@@ -9,7 +9,7 @@ const SliderComponent = ({ data }) => {
           <div className="shadow-lg rounded-xl h-52 w-72 max-w-[40vw] md:w-96 p-4 bg-gray-700 relative overflow-hidden">
             <a href="#" className="w-full h-full block">
               <div className="flex items-center border-b-2 mb-2 py-2">
-                <div className="h-10 w-10 bg-green-400 rounded-full">
+                <div className="h-10 w-10 bg-green-400 flex items-center justify-center rounded-full">
                   {" "}
                   {icon}{" "}
                 </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Typography } from "../../../common/shared";
+import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 
 const BlogCard = ({ src, link, title, body, onClick }) => {
   return (
@@ -25,6 +26,7 @@ const BlogCard = ({ src, link, title, body, onClick }) => {
           text="read more"
           className="h-8 w-32"
           textClassName="text-white/80 ml-5"
+          icon={<ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />}
           iconClassName="h-8 w-8 -top-[1px] right-[1px]"
         />
       </div>
