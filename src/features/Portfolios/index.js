@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { Cruxcoh, Jsn, Port1, Port2, Port3 } from "../../assets";
 import { Typography } from "../../common/shared";
-import { Portfolio } from './layouts/Portfolio';
+import { PortfolioImage } from "./layouts/Portfolio";
 
 const Portfolios = () => {
   const [selectedKeyword, setSelectedKeyword] = useState("all");
-  let data = [{ img: "", title: "", keywords: ["all"] }];
+  let data = [
+    { src: Cruxcoh, name: "Cruxcohtech College", keywords: ["all", "website"] },
+    { src: Jsn, name: "Justice support network", keywords: ["all", "website"] },
+    { src: Port1, name: "global investment", keywords: ["all", "website"] },
+    { src: Port2, name: "Admin web app", keywords: ["all", "website"] },
+    { src: Port3, name: "Curly chat", keywords: ["all", "website"] },
+  ];
   let keywords = ["all", "website", "mobile"];
   const filteredPortfolios = data.filter((item) =>
     item.keywords.includes(selectedKeyword)
@@ -33,7 +40,7 @@ const Portfolios = () => {
               } cursor-pointer hover:text-green-400`,
               color: "white",
               onClick: () => setSelectedKeyword(item),
-              capitalize: true
+              capitalize: true,
             }}
           >
             {item}
@@ -41,9 +48,9 @@ const Portfolios = () => {
         ))}
       </div>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-14 lg:px-20 px-8 pb-10">
-        <Portfolio />
-        <Portfolio />
-        <Portfolio />
+        {filteredPortfolios.map(({ src, name }, key) => (
+          <PortfolioImage {...{ src, name, key }} />
+        ))}
       </div>
     </div>
   );
