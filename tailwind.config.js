@@ -30,7 +30,18 @@ module.exports = {
         '6xl': '4rem',
         '7xl': '5rem',
       },
-    },
+      animation: {
+        'pings': 'pings 2s cubic-bezier(0, 0, 0.2, 1) infinite;'
+      },
+      keyframes: {
+        pings: {
+          '75%, 100%': {
+            transform: 'scale(2)',
+            opacity: 0,
+          }
+        }
+      },
+    }
   },
   plugins: [
     require('tailwind-scrollbar-hide')

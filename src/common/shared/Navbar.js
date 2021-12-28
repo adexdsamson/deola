@@ -21,27 +21,27 @@ import {
 const Navbar = () => {
   const location = useLocation();
   let data = [
-    { link: HOME_ROUTE, icon: <HomeIcon className="text-white/80 h-5 w-5" /> },
-    { link: ABOUT_ROUTE, icon: <UserIcon className="text-white/80 h-5 w-5" /> },
+    { link: HOME_ROUTE, icon: <HomeIcon className="group-hover:text-white/80 h-5 w-5 active:text-white/80" /> },
+    { link: ABOUT_ROUTE, icon: <UserIcon className="group-hover:text-white/80 h-5 w-5" /> },
     {
       link: SKILLS_ROUTE,
-      icon: <BriefcaseIcon className="text-white/80 h-5 w-5" />,
+      icon: <BriefcaseIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
     {
       link: BACKGROUND_ROUTE,
-      icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      icon: <HandIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
     {
       link: PORTFOLIO_ROUTE,
-      icon: <PhotographIcon className="text-white/80 h-5 w-5" />,
+      icon: <PhotographIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
     {
       link: CONTACT_US_ROUTE,
-      icon: <MailIcon className="text-white/80 h-5 w-5" />,
+      icon: <MailIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
     {
       link: BLOG_ROUTE,
-      icon: <NewspaperIcon className="text-white/80 h-5 w-5" />,
+      icon: <NewspaperIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
   ];
   return (
@@ -50,13 +50,13 @@ const Navbar = () => {
         <Link className="relative" to={item?.link}>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer  ${
-              location.pathname === item.link ? "bg-green-400 animate-ping" : "bg-transparent"
-            } absolute mt-1`}
+              location.pathname === item.link ? "bg-green-400 animate-pings" : "bg-transparent"
+            } absolute top-2`}
           ></div>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer flex items-center justify-center ${
-              location.pathname === item.link ? "bg-green-400" : "bg-gray-700"
-            } relative my-4 mt-2 hover:border-2 hover:border-green-400`}
+              location.pathname === item.link ? "bg-green-400 text-white/80" : "bg-gray-700 text-gray-500"
+            } relative my-4 mt-2 hover:border-2 hover:border-green-400 group`}
           >
             {item?.icon}
           </div>

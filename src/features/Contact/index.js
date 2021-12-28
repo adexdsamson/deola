@@ -32,7 +32,7 @@ const ContactUs = () => {
           Get in <span className="text-green-400">Touch</span>
         </Typography>
       </div>
-      <div className="flex items-center justify-center gap-10 mt-14 px-20">
+      <div className="lg:flex items-center justify-center gap-10 mt-14 lg:px-20 px-8 pb-10 lg:pb-0">
         <div className="h-full w-80">
           <Typography
             variant="h4"
@@ -130,15 +130,15 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="h-full grow">
-          <form className="mx-10">
-            <div className="flex gap-3 mb-10 items-center">
+          <form className="lg:mx-10 mt-10 lg:mt-0">
+            <div className="lg:flex gap-3 lg:mb-10 mb-5 items-center">
               <Input placeholder="Your name" />
-              <Input placeholder="your email" />
+              <Input placeholder="your email" className="mt-5 lg:mt-0" />
             </div>
-            <Input className="mb-10" placeholder="subject" />
+            <Input className="mlg:b-10 mb-5" placeholder="subject" />
             <Input
               variant="textarea"
-              className="rounded-2xl mb-10"
+              className="rounded-2xl lg:mb-10 mb-5"
               placeholder="your message"
               rows={6}
             />

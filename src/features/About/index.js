@@ -17,7 +17,7 @@ const About = () => {
     { title: "language", value: "yoruba, english" },
   ];
   return (
-    <section className="h-screen overflow-hidden bg-black">
+    <section className="h-full overflow-hidden bg-black scrollbar-hide">
       <div className="text-center mt-20">
         <Typography
           variant="h2"
@@ -29,20 +29,28 @@ const About = () => {
         </Typography>
         {/* <span className="text-7xl left-0 tracking-wide leading-7 right-0 top-1/2 uppercase font-bold -translate-y-1/2 text-slate-50">Resume</span> */}
       </div>
-      <div className="grid gap-5 grid-cols-2 mt-14">
-        <div className="p-10 ml-14">
+      <div className="grid gap-5 lg:grid-cols-2 grid-cols-1 mt-14 mx-8">
+        <div className="lg:p-10 lg:ml-14">
           <Typography
             color={"white"}
             variant={"h3"}
             uppercase={true}
-            className={"font-bold mb-5"}
+            className={"font-bold mb-5 hidden"}
           >
             Personal <span className="text-green-400"> Infos </span>
           </Typography>
-          <div className="flex flex-wrap">
+          <Typography
+            color={"white"}
+            variant={"h4"}
+            uppercase={true}
+            className={"font-bold mb-5 lg:hidden"}
+          >
+            Personal <span className="text-green-400"> Infos </span>
+          </Typography>
+          <div className="flex flex-wrap gap-x-10 lg:gap-1">
             <div>
               {LeftData.map((item) => (
-                <div className="flex my-4 items-center">
+                <div className="lg:flex my-4 items-center">
                   <Typography
                     variant={"small"}
                     className={"text-white/50"}
@@ -54,16 +62,16 @@ const About = () => {
                     variant={"body2"}
                     color={"white"}
                     capitalize
-                    className="ml-2"
+                    className="lg:ml-2 mt-1 lg:mt-0"
                   >
                     {item.value}
                   </Typography>
                 </div>
               ))}
             </div>
-            <div className="ml-20">
+            <div className="">
               {RightData.map((item) => (
-                <div className="flex my-4 items-center">
+                <div className="lg:flex my-4 items-center">
                   <Typography
                     variant={"small"}
                     className={"text-white/50"}
@@ -75,7 +83,7 @@ const About = () => {
                     variant={"body2"}
                     color={"white"}
                     capitalize
-                    className="ml-2"
+                    className="lg:ml-2 mt-1 lg:mt-0"
                   >
                     {item.value}
                   </Typography>
@@ -85,15 +93,17 @@ const About = () => {
             <Button
               text="Download CV"
               className={"mt-4"}
-              icon={<ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />}
+              icon={
+                <ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />
+              }
             />
           </div>
         </div>
-        <div className="pt-10">
-          <div className="h-40 w-64 border border-gray-500 p-5 px-8 rounded">
+        <div className="py-10 lg:pb-0 flex gap-x-4">
+          <div className="h-28 w-40 lg:h-40 lg:w-64 border border-gray-500 p-5 px-8 rounded">
             <Typography
               className={
-                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1 hidden lg:block"
               }
               variant="h1"
             >
@@ -101,18 +111,33 @@ const About = () => {
             </Typography>
             <Typography
               className={
-                "before:content-[''] before:absolute before:-left-9 before:top-3 before:h-0.5 before:w-5 before:rounded before:bg-green-400 relative text-green-400 w-20 ml-10 mt-3"
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1 lg:hidden"
+              }
+              variant="h4"
+            >
+              4
+            </Typography>
+            <Typography
+              className={
+                "before:content-[''] before:absolute before:-left-9 before:top-3 before:h-0.5 before:w-5 before:rounded before:bg-green-400 relative text-green-400 w-20 ml-10 mt-3 hidden lg:block"
               }
               variant="body2"
               uppercase
             >
               years of experience
             </Typography>
+            <Typography
+              className={"relative text-green-400 w-20 mt-1 lg:hidden"}
+              variant="body2"
+              uppercase
+            >
+              years of experience
+            </Typography>
           </div>
-          <div className="h-40 w-64 border float-right border-gray-500 mr-20 p-5 px-8 rounded">
+          <div className="h-28 w-40 lg:h-40 lg:w-64 border lg:float-right border-gray-500 lg:mr-20 p-5 px-8 rounded">
             <Typography
               className={
-                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1"
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1 hidden lg:block"
               }
               variant="h1"
             >
@@ -120,8 +145,23 @@ const About = () => {
             </Typography>
             <Typography
               className={
-                "before:content-[''] before:absolute before:-left-9 before:top-3 before:h-0.5 before:w-5 before:rounded before:bg-green-400 relative text-green-400 w-20 ml-10 mt-3"
+                "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1 lg:hidden"
               }
+              variant="h4"
+            >
+              10
+            </Typography>
+            <Typography
+              className={
+                "before:content-[''] before:absolute before:-left-9 before:top-3 before:h-0.5 before:w-5 before:rounded before:bg-green-400 relative text-green-400 w-20 ml-10 mt-3 hidden lg:block"
+              }
+              variant="body2"
+              uppercase
+            >
+              completed project
+            </Typography>
+            <Typography
+              className={"relative text-green-400 w-20 mt-1 lg:hidden"}
               variant="body2"
               uppercase
             >

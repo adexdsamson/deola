@@ -41,24 +41,25 @@ const BackgroundExperience = () => {
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
-      company: "Federal University of Agriculture, Abeokuta",
-      position: "Bachelor Degree",
-      content: "Studied Physics in Federal University of Agriculture Abeokuta.",
-      duration: "2014 - 2018",
-      icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
-    },
-    {
       company: "Pottershub network",
       position: "Team lead",
       content: "",
       duration: "2022 - present",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
+    {
+      company: "Funaab",
+      position: "Bachelor Degree",
+      content: "Studied Physics in Federal University of Agriculture Abeokuta.",
+      duration: "2014 - 2018",
+      icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
+    },
+    
     // { company: "", position: "", content: "", duration: "" },
   ];
   return (
-    <div className="h-screen overflow-hidden bg-black">
-      <div className="text-center mt-20">
+    <div className="lg:h-screen h-full lg:overflow-hidden bg-black">
+      <div className="text-center pt-20">
         <Typography
           variant="h2"
           color="white"
@@ -68,37 +69,95 @@ const BackgroundExperience = () => {
           Experience & <span className="text-green-400">Education</span>
         </Typography>
       </div>
-      <div className="flex items-center justify-center mt-2">
-        <Typography
-          {...{
-            variant: "body1",
-            className: `transition ease-in-out mx-1 ${
-              activeTab === "carousel" &&
-              "border-b-2 p-2 border-green-400 font-bold"
-            } cursor-pointer hover:text-green-400 duration-300`,
-            color: "white",
-            onClick: () => setActtiveTab("carousel"),
-          }}
-        >
-          Carousel
-        </Typography>
-        <Typography
-          {...{
-            variant: "body1",
-            className: `transition ease-in-out mx-1 ${
-              activeTab === "sparsed" &&
-              "border-b-2 p-2 border-green-400 font-bold"
-            } cursor-pointer hover:text-green-400 duration-300`,
-            color: "white",
-            onClick: () => setActtiveTab("sparsed"),
-          }}
-        >
-          Sparse
-        </Typography>
+      <div className="hidden lg:block">
+        <div className="flex items-center justify-center mt-2">
+          <Typography
+            {...{
+              variant: "body1",
+              className: `transition ease-in-out mx-1 ${
+                activeTab === "carousel" &&
+                "border-b-2 p-2 border-green-400 font-bold"
+              } cursor-pointer hover:text-green-400 duration-300`,
+              color: "white",
+              onClick: () => setActtiveTab("carousel"),
+            }}
+          >
+            Carousel
+          </Typography>
+          <Typography
+            {...{
+              variant: "body1",
+              className: `transition ease-in-out mx-1 ${
+                activeTab === "sparsed" &&
+                "border-b-2 p-2 border-green-400 font-bold"
+              } cursor-pointer hover:text-green-400 duration-300`,
+              color: "white",
+              onClick: () => setActtiveTab("sparsed"),
+            }}
+          >
+            Sparse
+          </Typography>
+        </div>
+        <div className="grid grid-cols-1 gap-10 mt-14 px-20">
+          {activeTab === "carousel" && <Carousel {...{ data }} />}
+          {activeTab === "sparsed" && <Sparsed {...{ data }} />}
+        </div>
       </div>
-      <div className="grid grid-cols-1 gap-10 mt-14 px-20">
-        {activeTab === "carousel" && <Carousel {...{ data }} />}
-        {activeTab === "sparsed" && <Sparsed {...{ data }} />}
+      <div className="grid grid-cols-1 px-8 lg:hidden pb-10">
+        {data.map(({ company, position, content, duration, icon }, i) => (
+          <li key={i} className="snap-center">
+            <div className="shadow-lg rounded-xl h-52 w-full p-4 bg-gray-700 relative overflow-hidden">
+              <a href="#" className="w-full h-full block">
+                <div className="flex items-center border-b-2 mb-2 py-2">
+                  <div className="h-10 w-10 bg-green-400 flex items-center justify-center rounded-full">
+                    {" "}
+                    {icon}{" "}
+                  </div>
+                  <div className="pl-3">
+                    <div>
+                      <Typography
+                        capitalize
+                        className="font-medium"
+                        variant={"subheader1"}
+                        color={"white"}
+                      >
+                        {company}
+                      </Typography>
+                    </div>
+                    <div className="flex py-1 items-center">
+                      <div className="text-gray-600 text-sm">
+                        <Typography
+                          capitalize
+                          className=""
+                          variant={"small"}
+                          color={"white"}
+                        >
+                          {position}
+                        </Typography>{" "}
+                        -
+                      </div>
+                      <div className="text-gray-700 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
+                        {duration}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full p-4">
+                  <Typography
+                    capitalize
+                    variant={"body2"}
+                    className={"text-white/60"}
+                  >
+                    {content}
+                  </Typography>
+                </div>
+                <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
+                  <div className="w-full h-full text-center text-xs text-white bg-green-400 rounded-full"></div>
+                </div>
+              </a>
+            </div>
+          </li>
+        ))}
       </div>
     </div>
   );

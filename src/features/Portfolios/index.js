@@ -40,7 +40,7 @@ const Portfolios = () => {
           </Typography>
         ))}
       </div>
-      <div className="grid grid-cols-3 gap-10 mt-14 px-20">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-14 lg:px-20 px-8 pb-10">
         <Portfolio />
         <Portfolio />
         <Portfolio />
