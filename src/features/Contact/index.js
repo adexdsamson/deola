@@ -1,5 +1,5 @@
 import { Button, Input, Typography } from "../../common/shared";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   ArrowNarrowRightIcon,
   MailIcon,
@@ -12,13 +12,30 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import { useState } from "react";
 
 const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   let data = [
-    { icon: <FaFacebookF className="text-white h-4 w-4" />, link: 'https://www.facebook.com' },
-    { icon: <FaTwitter className="text-white h-4 w-4" />,  link: 'https://www.twitter.com' },
-    { icon: <FaLinkedinIn className="text-white h-4 w-4" />,  link: 'https://www.linkedin.com/' },
-    { icon: <FaInstagram className="text-white h-4 w-4" />,  link: 'https://www.instagram.com/' },
+    {
+      icon: <FaFacebookF className="text-white h-4 w-4" />,
+      link: "https://www.facebook.com",
+    },
+    {
+      icon: <FaTwitter className="text-white h-4 w-4" />,
+      link: "https://www.twitter.com",
+    },
+    {
+      icon: <FaLinkedinIn className="text-white h-4 w-4" />,
+      link: "https://www.linkedin.com/",
+    },
+    {
+      icon: <FaInstagram className="text-white h-4 w-4" />,
+      link: "https://www.instagram.com/",
+    },
   ];
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-black">
@@ -122,9 +139,12 @@ const ContactUs = () => {
           <div className="flex gap-3 mt-7 items-center">
             {data.map((item, i) => (
               <a href={item.link}>
-                <div key={i} className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-full">
-                {item.icon}
-              </div>
+                <div
+                  key={i}
+                  className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-full"
+                >
+                  {item.icon}
+                </div>
               </a>
             ))}
           </div>
@@ -132,19 +152,35 @@ const ContactUs = () => {
         <div className="h-full grow">
           <form className="lg:mx-10 mt-10 lg:mt-0">
             <div className="lg:flex gap-3 lg:mb-10 mb-5 items-center">
-              <Input placeholder="Your name" />
-              <Input placeholder="your email" className="mt-5 lg:mt-0" />
+              <Input
+                placeholder="Your name"
+                onChange={(value) => setName(value)}
+              />
+              <Input
+                placeholder="your email"
+                className="mt-5 lg:mt-0"
+                onChange={(value) => setEmail(value)}
+              />
             </div>
-            <Input className="mlg:b-10 mb-5" placeholder="subject" />
+            <Input
+              className="mlg:b-10 mb-5"
+              placeholder="subject"
+              onChange={(value) => setSubject(value)}
+            />
             <Input
               variant="textarea"
               className="rounded-2xl lg:mb-10 mb-5"
+              onChange={(value) => setMessage(value)}
               placeholder="your message"
               rows={6}
             />
             <Button
+              component="a"
+              href={`mailto:offers@deolaadediran.com?cc=${email}?subject=${subject}&body=${message}`}
               text="send message"
-              icon={<ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />}
+              icon={
+                <ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />
+              }
             />
           </form>
         </div>

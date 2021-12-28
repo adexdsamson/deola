@@ -91,7 +91,9 @@ const About = () => {
               ))}
             </div>
             <Button
-              text="Download CV"
+              component="a"
+              href="https://drive.google.com/file/d/1NEQFJNgWy3NC2JNRwxwjsR3zgoPSoc_c/view?usp=sharing"
+              text="View CV"
               className={"mt-4"}
               icon={
                 <ArrowNarrowRightIcon className="text-white h-5 w-5 animate-pulse" />

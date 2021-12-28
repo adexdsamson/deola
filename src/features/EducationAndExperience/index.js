@@ -12,7 +12,7 @@ const BackgroundExperience = () => {
       company: "Oracle Christian Center O2C",
       position: "Sound Engineer",
       content:
-        "Coordinate a team of technical sound engineers, to provide an excellent sound to the church",
+        "Coordination of a team of expert sound specialists to ensure that the church has outstanding sound.",
       duration: "2014 - 2018 ",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
@@ -20,7 +20,7 @@ const BackgroundExperience = () => {
       company: "FIIRO",
       position: "Internship",
       content:
-        "Assisted with the processing of foodstuffs into granular and preserved state.",
+        "Aided in the processing of foodstuffs into granular and preserved states, as well as the development of specialized devices to achieve a desired texture or gastronomic outcome.",
       duration: "6 months",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
@@ -28,7 +28,7 @@ const BackgroundExperience = () => {
       company: "NIMET",
       position: "Internship",
       content:
-        "Assisted in reading, calculate and measuring the current state of weather and also predicting the weather outcomes.",
+        "Aided in reading, calculating, and measuring the current state of the weather, as well as projecting meteorological consequences.",
       duration: "2018 - 2018",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
@@ -36,21 +36,21 @@ const BackgroundExperience = () => {
       company: "Alabian Solutions",
       position: "Internship",
       content:
-        "Assisted in developing the company's client website and also design some website with figma",
+        "Aided in the development of a number of companies' client websites, as well as the design of several websites using Figma.",
       duration: "2021 - 2022",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Pottershub network",
       position: "Team lead",
-      content: "",
+      content: "Aided in the development of a number of companies' client websites with group of developers.",
       duration: "2022 - present",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Funaab",
       position: "Bachelor Degree",
-      content: "Studied Physics in Federal University of Agriculture Abeokuta.",
+      content: "Attended the Federal University of Agriculture Abeokuta and majored in Physics.",
       duration: "2014 - 2018",
       icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
     },
