@@ -51,7 +51,7 @@ const Navbar = () => {
           <div
             className={`h-10 w-10 rounded-full cursor-pointer  ${
               location.pathname === item.link ? "bg-green-400 animate-pings" : "bg-transparent"
-            } absolute top-2`}
+            } absolute top-0`}
           ></div>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer flex items-center justify-center ${
