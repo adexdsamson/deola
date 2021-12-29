@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cruxcoh, Jsn, Port1, Port2, Port3 } from "../../assets";
+import { Cruxcoh, Jsn, Port1, Port2, Port3, Shawn } from "../../assets";
 import { Typography } from "../../common/shared";
 import { PortfolioImage } from "./layouts/Portfolio";
 
@@ -11,6 +11,7 @@ const Portfolios = () => {
     { src: Port1, name: "global investment", keywords: ["all", "website"] },
     { src: Port2, name: "Admin web app", keywords: ["all", "website"] },
     { src: Port3, name: "Curly chat", keywords: ["all", "website"] },
+    { src: Shawn, name: "Shawn Exchange", keywords: ["all", "website"] },
   ];
   let keywords = ["all", "website", "mobile"];
   const filteredPortfolios = data.filter((item) =>

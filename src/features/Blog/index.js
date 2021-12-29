@@ -24,7 +24,7 @@ const BlogSection = () => {
 
   useEffect(() => {
     gql(GET_USER_ARTICLES, { page: 0 });
-  }, [])
+  }, [gql])
   
   return (
       <div className="h-screen overflow-x-hidden scrollbar-hide bg-black ">
