@@ -8,12 +8,12 @@ export const blogApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.hashnode.com' }),
   endpoints: (builder) => ({
     getHashNodeBlogs: builder.mutation({
-      query: (data, variable = {}) => ({
+      query: ({ query, variables }) => ({
         url: '/',
         method: 'post',
         body: {
-          data,
-          variable
+          query,
+          variables
         }
       })
     })

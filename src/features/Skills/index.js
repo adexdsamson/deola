@@ -18,7 +18,7 @@ const Skills = () => {
     {skill: 'graphql', progress: '60'},
   ];
   return (
-    <div className="lg:h-screen h-full lg:overflow-hidden bg-black">
+    <div className="lg:h-screen md:h-screen h-full lg:overflow-hidden bg-black">
       <div className="text-center pt-20">
         <Typography
           variant="h2"
@@ -29,7 +29,7 @@ const Skills = () => {
           My <span className="text-green-400">Skills</span>
         </Typography>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:mt-10 lg:px-20 px-8 pb-10">
+      <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:mt-10 lg:px-20 md:px-16 px-8 pb-10">
         {data.map(({ skill, progress }, i) => (
           <div key={i} className="h-32 w-32 text-center my-10">
             <CircularProgressbar

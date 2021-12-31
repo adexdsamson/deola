@@ -1,5 +1,7 @@
 import { Button, Typography } from "../../common/shared";
 import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
+import Avatar from "../Home/layouts/avatar";
+import { Pic1 } from "../../assets";
 
 const About = () => {
   let LeftData = [
@@ -29,13 +31,13 @@ const About = () => {
         </Typography>
         {/* <span className="text-7xl left-0 tracking-wide leading-7 right-0 top-1/2 uppercase font-bold -translate-y-1/2 text-slate-50">Resume</span> */}
       </div>
-      <div className="grid gap-5 lg:grid-cols-2 grid-cols-1 mt-14 mx-8">
+      <div className="grid gap-5 lg:grid-cols-2 grid-cols-1 mt-14 md:mx-20 mx-8">
         <div className="lg:p-10 lg:ml-14">
           <Typography
             color={"white"}
             variant={"h3"}
             uppercase={true}
-            className={"font-bold mb-5 hidden"}
+            className={"font-bold mb-5 hidden lg:block"}
           >
             Personal <span className="text-green-400"> Infos </span>
           </Typography>
@@ -47,16 +49,17 @@ const About = () => {
           >
             Personal <span className="text-green-400"> Infos </span>
           </Typography>
-          <div className="flex flex-wrap gap-x-10 lg:gap-1">
+          <Avatar src={Pic1} containerClassName="lg:hidden" />
+          <div className="flex flex-wrap gap-x-10 lg:gap-x-14">
             <div>
               {LeftData.map((item) => (
-                <div className="lg:flex my-4 items-center">
+                <div className="lg:flex my-4 lg:my-6 items-center">
                   <Typography
                     variant={"small"}
                     className={"text-white/50"}
                     capitalize
                   >
-                    {item.title}
+                    {item.title}:
                   </Typography>
                   <Typography
                     variant={"body2"}
@@ -71,13 +74,13 @@ const About = () => {
             </div>
             <div className="">
               {RightData.map((item) => (
-                <div className="lg:flex my-4 items-center">
+                <div className="lg:flex my-4 lg:my-6 items-center">
                   <Typography
                     variant={"small"}
                     className={"text-white/50"}
                     capitalize
                   >
-                    {item.title}
+                    {item.title}:
                   </Typography>
                   <Typography
                     variant={"body2"}
@@ -92,7 +95,7 @@ const About = () => {
             </div>
             <Button
               component="a"
-              href="https://drive.google.com/file/d/1NEQFJNgWy3NC2JNRwxwjsR3zgoPSoc_c/view?usp=sharing"
+              href="https://drive.google.com/file/d/1MRbSsTQEasj14DyGiZsGrcuous3X9QcC/view?usp=sharing"
               text="View CV"
               className={"mt-4"}
               icon={
@@ -101,7 +104,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="py-10 lg:pb-0 flex gap-x-4">
+        <div className="py-10 lg:pb-0 flex lg:block gap-x-4">
           <div className="h-28 w-40 lg:h-40 lg:w-64 border border-gray-500 p-5 px-8 rounded">
             <Typography
               className={
@@ -109,7 +112,7 @@ const About = () => {
               }
               variant="h1"
             >
-              4
+              3
             </Typography>
             <Typography
               className={
@@ -117,7 +120,7 @@ const About = () => {
               }
               variant="h4"
             >
-              4
+              3
             </Typography>
             <Typography
               className={

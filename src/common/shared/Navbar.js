@@ -46,12 +46,12 @@ const Navbar = () => {
   ];
   return (
     <ul className="">
-      {data.map((item) => (
-        <Link className="relative" to={item?.link}>
+      {data.map((item, key) => (
+        <Link {...{ key }} className="relative" to={item?.link}>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer  ${
               location.pathname === item.link ? "bg-green-400 animate-pings" : "bg-transparent"
-            } absolute top-0`}
+            } absolute lg:top-0 top-0`}
           ></div>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer flex items-center justify-center ${

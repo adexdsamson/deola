@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cruxcoh, Jsn, Port1, Port2, Port3, Shawn } from "../../assets";
+import { Communique, Cruxcoh, Eapay, Hootr, Jsn, Port1, Port2, Port3, Shawn, UberClone } from "../../assets";
 import { Typography } from "../../common/shared";
 import { PortfolioImage } from "./layouts/Portfolio";
 
@@ -12,6 +12,10 @@ const Portfolios = () => {
     { src: Port2, name: "Admin web app", keywords: ["all", "website"] },
     { src: Port3, name: "Curly chat", keywords: ["all", "website"] },
     { src: Shawn, name: "Shawn Exchange", keywords: ["all", "website"] },
+    { src: Eapay, name: "Eapay", keywords: ["all", "website"] },
+    { src: Hootr, name: "Hootr - dating app", keywords: ["all", "mobile"] },
+    { src: Communique, name: "Communique - chatting app", keywords: ["all", "mobile"] },
+    { src: UberClone, name: "Uber clone app", keywords: ["all", "mobile"] },
   ];
   let keywords = ["all", "website", "mobile"];
   const filteredPortfolios = data.filter((item) =>
@@ -48,7 +52,7 @@ const Portfolios = () => {
           </Typography>
         ))}
       </div>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-14 lg:px-20 px-8 pb-10">
+      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-10 gap-10 mt-14 lg:px-20 px-8 pb-10">
         {filteredPortfolios.map(({ src, name }, key) => (
           <PortfolioImage {...{ src, name, key }} />
         ))}

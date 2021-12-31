@@ -22,7 +22,7 @@ const ContactUs = () => {
   let data = [
     {
       icon: <FaFacebookF className="text-white h-4 w-4" />,
-      link: "https://www.facebook.com",
+      link: "https://www.facebook.com/samsonadeola94",
     },
     {
       icon: <FaTwitter className="text-white h-4 w-4" />,
@@ -30,11 +30,11 @@ const ContactUs = () => {
     },
     {
       icon: <FaLinkedinIn className="text-white h-4 w-4" />,
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/adeolasadediran/",
     },
     {
       icon: <FaInstagram className="text-white h-4 w-4" />,
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/diran_deola",
     },
   ];
   return (
@@ -163,7 +163,7 @@ const ContactUs = () => {
               />
             </div>
             <Input
-              className="mlg:b-10 mb-5"
+              className="lg:mb-10 mb-5"
               placeholder="subject"
               onChange={(value) => setSubject(value)}
             />

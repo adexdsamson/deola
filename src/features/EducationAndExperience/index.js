@@ -4,6 +4,7 @@ import { Typography } from "../../common/shared";
 import Carousel from "./layout/Slider";
 import Sparsed from "./layout/Sparsed";
 import { HandIcon, BookOpenIcon } from "@heroicons/react/solid";
+import Fade from "react-reveal/Fade";
 
 const BackgroundExperience = () => {
   let [activeTab, setActtiveTab] = useState("carousel");
@@ -34,31 +35,33 @@ const BackgroundExperience = () => {
     },
     {
       company: "Alabian Solutions",
-      position: "Internship",
+      position: "Frontend",
       content:
         "Aided in the development of a number of companies' client websites, as well as the design of several websites using Figma.",
-      duration: "2021 - 2022",
+      duration: "2021 - present",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Pottershub network",
       position: "Team lead",
-      content: "Aided in the development of a number of companies' client websites with group of developers.",
+      content:
+        "Aided in the development of a number of companies' client websites with group of developers.",
       duration: "2022 - present",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
       company: "Funaab",
       position: "Bachelor Degree",
-      content: "Attended the Federal University of Agriculture Abeokuta and majored in Physics.",
+      content:
+        "Attended the Federal University of Agriculture Abeokuta and majored in Physics.",
       duration: "2014 - 2018",
       icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
     },
-    
+
     // { company: "", position: "", content: "", duration: "" },
   ];
   return (
-    <div className="lg:h-screen h-full lg:overflow-hidden bg-black">
+    <div className="lg:h-screen md:h-screen h-full lg:overflow-hidden bg-black">
       <div className="text-center pt-20">
         <Typography
           variant="h2"
@@ -99,11 +102,15 @@ const BackgroundExperience = () => {
           </Typography>
         </div>
         <div className="grid grid-cols-1 gap-10 mt-14 px-20">
-          {activeTab === "carousel" && <Carousel {...{ data }} />}
-          {activeTab === "sparsed" && <Sparsed {...{ data }} />}
+          <Fade when={activeTab === "carousel"} left>
+            {activeTab === "carousel" && <Carousel {...{ data }} />}
+          </Fade>
+          <Fade when={activeTab === "sparsed"} right>
+            {activeTab === "sparsed" && <Sparsed {...{ data }} />}
+          </Fade>
         </div>
       </div>
-      <div className="grid grid-cols-1 px-8 lg:hidden pb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 px-8 lg:hidden md:px-16 pb-10">
         {data.map(({ company, position, content, duration, icon }, i) => (
           <li key={i} className="snap-center">
             <div className="shadow-lg rounded-xl h-52 w-full p-4 bg-gray-700 relative overflow-hidden">

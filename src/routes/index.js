@@ -1,5 +1,6 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "../common/Layout";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   Home,
   About,
@@ -7,7 +8,7 @@ import {
   BackgroundExperience,
   Portfolio,
   ContactUs,
-  Blog
+  Blog,
 } from "../features";
 import {
   HOME_ROUTE,
@@ -16,22 +17,27 @@ import {
   BACKGROUND_ROUTE,
   PORTFOLIO_ROUTE,
   CONTACT_US_ROUTE,
-  BLOG_ROUTE
+  BLOG_ROUTE,
 } from "./constant";
 
 const RouteComponent = () => {
+  const location = useLocation();
   return (
-    <Layout>
-      <Routes>
-        <Route path={HOME_ROUTE} element={<Home />} />
-        <Route path={ABOUT_ROUTE} element={<About />} />
-        <Route path={SKILLS_ROUTE} element={<Skills />} />
-        <Route path={BACKGROUND_ROUTE} element={<BackgroundExperience />} />
-        <Route path={PORTFOLIO_ROUTE} element={<Portfolio />} />
-        <Route path={CONTACT_US_ROUTE} element={<ContactUs />} />
-        <Route path={BLOG_ROUTE} element={<Blog />} />
-      </Routes>
-    </Layout>
+    <TransitionGroup component={null}>
+      <CSSTransition key={location.key} classNames="fade" timeout={700}>
+        <Layout>
+          <Routes>
+            <Route path={HOME_ROUTE} element={<Home />} />
+            <Route path={ABOUT_ROUTE} element={<About />} />
+            <Route path={SKILLS_ROUTE} element={<Skills />} />
+            <Route path={BACKGROUND_ROUTE} element={<BackgroundExperience />} />
+            <Route path={PORTFOLIO_ROUTE} element={<Portfolio />} />
+            <Route path={CONTACT_US_ROUTE} element={<ContactUs />} />
+            <Route path={BLOG_ROUTE} element={<Blog />} />
+          </Routes>
+        </Layout>
+      </CSSTransition>
+    </TransitionGroup>
   );
 };
 
