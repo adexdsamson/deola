@@ -10,6 +10,9 @@ import Eapay from './portfolio/eapay.png';
 import Hootr from './portfolio/hootr.jpg';
 import Communique from './portfolio/communique.png';
 import UberClone from './portfolio/uber.png';
+import Samanad from './portfolio/samand.png';
+import Global from './portfolio/global.png';
+import Cream from './portfolio/cream.png';
 
 
 export {
@@ -24,5 +27,8 @@ export {
   Eapay,
   Hootr,
   Communique,
-  UberClone
+  UberClone,
+  Samanad,
+  Global,
+  Cream
 }

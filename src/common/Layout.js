@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         }}
       /> */}
       {children}
-      <div className={`fixed right-5 lg:-top-8 ${ showMenu ? '-top-48' : 'top-2' } z-50 translate-y-1/2`}>
+      <div className={`fixed right-5 lg:-top-8 ${ showMenu ? '-top-48' : 'top-2' } z-20 translate-y-1/2`}>
         <div
           onClick={() => setShowMenu(!showMenu)}
           className="h-12 w-12 rounded-full cursor-pointer flex items-center justify-center bg-gray-700 text-white mb-3 lg:hidden"

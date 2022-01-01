@@ -11,6 +11,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaGithub
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -35,6 +36,10 @@ const ContactUs = () => {
     {
       icon: <FaInstagram className="text-white h-4 w-4" />,
       link: "https://www.instagram.com/diran_deola",
+    },
+    {
+      icon: <FaGithub className="text-white h-4 w-4" />,
+      link: "https://github.com/adexdsamson",
     },
   ];
   return (

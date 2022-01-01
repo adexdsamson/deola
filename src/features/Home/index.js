@@ -4,14 +4,13 @@ import Avatar from "./layouts/avatar";
 import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 import { ABOUT_ROUTE } from "../../routes/constant";
-import { Slide } from "react-reveal";
 
 const Homepage = () => {
   return (
     <section className="h-screen overflow-hidden">
       <div className="h-full bg-black"></div>
       <div className="h-full bg-green-400 absolute top-0 w-72 z-10 skew-x-6 -left-9 rounded-md hidden lg:block"></div>
-      <div className="absolute top-0 mt-20 lg:mt-0 lg:h-full w-full z-50 lg:flex items-center px-8">
+      <div className="absolute top-0 mt-20 lg:mt-0 lg:h-full w-full z-10 lg:flex items-center px-8">
         {/* <Slide top> */}
           <Avatar src={Pic} />
         {/* </Slide> */}

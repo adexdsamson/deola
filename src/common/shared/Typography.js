@@ -13,6 +13,7 @@ const variantsMapping = {
   body1: "p",
   body2: "p",
   small: "span",
+  a: 'a'
 };
 
 const fontSizeVariantMapping = {
@@ -76,6 +77,7 @@ Typography.propTypes = {
     "body1",
     "body2",
     "small",
+    "a",
   ]),
   className: PropTypes.string,
   color: PropTypes.oneOf(["defaultHeader", "defaultBody", "white", "danger", "black"]),
