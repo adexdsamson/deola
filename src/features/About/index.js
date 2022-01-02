@@ -32,7 +32,7 @@ const About = () => {
         {/* <span className="text-7xl left-0 tracking-wide leading-7 right-0 top-1/2 uppercase font-bold -translate-y-1/2 text-slate-50">Resume</span> */}
       </div>
       <div className="grid gap-5 lg:grid-cols-2 grid-cols-1 mt-14 md:mx-20 mx-8">
-        <div className="lg:p-10 lg:ml-14">
+        <div className="lg:p-10">
           <Typography
             color={"white"}
             variant={"h3"}
@@ -139,7 +139,7 @@ const About = () => {
               years of experience
             </Typography>
           </div>
-          <div className="h-28 w-40 lg:h-40 lg:w-64 border lg:float-right border-gray-500 lg:mr-20 p-5 px-8 rounded">
+          <div className="h-28 w-40 lg:h-40 lg:w-64 border lg:float-right border-gray-500 lg:mr-14 p-5 px-8 lg:mt-5 rounded">
             <Typography
               className={
                 "font-bold text-green-400 lining-nums after:content-['+'] after:absolute after:font-semibold after:text-2xl after:ml-1 hidden lg:block"

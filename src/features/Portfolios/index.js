@@ -28,7 +28,7 @@ const Portfolios = () => {
       project_link: "",
       github_link: "",
       description:
-        "A web app for built for a nurse college, to display information about v",
+        "A web app for a nursing college that displays information about the college and provides updates such as blogs and important updates. To upload those details, use the platform as an admin platform",
     },
     {
       src: Jsn,
@@ -37,16 +37,16 @@ const Portfolios = () => {
       stacks: ["Reactjs", "Material -ui", "Redux"],
       project_link: "",
       github_link: "",
-      description: "",
+      description: "This is a web application built as a role-oriented management system that allows users to request legal assistance or any other type of assistance and also allows lawyers or volunteers to select from a list of available requests, as well as allowing admin to regulate platform usage. When a request is granted, users and volunteers can message one other, upload photographs to the case, dismiss the case when both parties are satisfied with the outcome, or request the admin's assistance",
     },
     {
       src: Samanad,
       name: "Samanad solar",
       keywords: ["all", "website"],
-      stacks: ["Reactjs"],
+      stacks: ["Reactjs", "Bootstrap"],
       project_link: "https://samanad-solar.web.app/",
       github_link: "",
-      description: "",
+      description: "A single web page to display information about Samanad solar business",
     },
     {
       src: Global,
@@ -55,7 +55,7 @@ const Portfolios = () => {
       stacks: ["Reactjs"],
       project_link: "https://global-forex-investment-cf594.web.app/",
       github_link: "",
-      description: "",
+      description: "A single web page ",
     },
     {
       src: Port2,
@@ -73,7 +73,7 @@ const Portfolios = () => {
       stacks: ["Material-ui", "Firebase", "Redux", "Reactjs"],
       project_link: "https://cream-bakery.firebaseapp.com",
       github_link: "creambakery",
-      description: "A single page appliction for a bakery business, allows customers of the site to submit request for cakes to the business whatsapp",
+      description: "A single-page application for a bakery business that allows site visitors to submit cake requests to the business's Whatsapp account",
     },
     {
       src: Port3,
@@ -91,7 +91,7 @@ const Portfolios = () => {
       stacks: ["Reactjs", "Redux", "Tailwind-ui"],
       project_link: "http://www.theshawnexchange.com/",
       github_link: "",
-      description: "A platform for selling cryptocurrency and gift cards to Shawn Exchange. The site allows customers to register an account, choose the goods they want to deal with, and provide transaction proof. Users can also view their previous transactions",
+      description: "A marketplace where you can sell cryptocurrency and gift cards to Shawn Exchange. Customers can create an account, select the commodities they want to deal with, and give transaction proof on the website. Users can also see a history of their previous transactions",
     },
     {
       src: Eapay,
@@ -127,7 +127,7 @@ const Portfolios = () => {
       stacks: ["React Native", "Expo", "Google api", ],
       project_link: "https://expo.dev/@adexd/uber_clone",
       github_link: "",
-      description: "A minimal uber clone, fetches location from google geolocation api and calculates the distance matrix from origin to destination, displays map distance",
+      description: "A simple Uber clone that retrieves a position from Google Geolocation API and computes the distance matrix from origin to destination, as well as displaying map distance",
     },
   ];
   let keywords = ["all", "website", "mobile"];

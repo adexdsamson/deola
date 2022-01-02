@@ -21,7 +21,7 @@ const Homepage = () => {
           >
             I'M ADEOLA ADEDIRAN.
             <span className="block uppercase text-5xl relative -top-[15px] text-white/90">
-              web developer
+              frontend developer
             </span>
           </Typography>
           <Typography
@@ -30,10 +30,10 @@ const Homepage = () => {
           >
             I'M ADEOLA ADEDIRAN.
             <span className="block uppercase lg:text-5xl text-2xl relative -top-[3px] text-white/90">
-              web developer
+              frontend developer
             </span>
           </Typography>
-          <Typography className="text-white/60 lg:w-11/12 md:w-3/4 md:mx-auto mt-3 leading-8 text-center lg:text-left">
+          <Typography className="text-white/60 lg:w-11/12 md:w-3/4 md:mx-auto mt-3 leading-8 text-center lg:text-left lg:mx-0 lg:mt-0">
             I'm a Nigerian based web and app designer & front‑end developer
             focused on crafting clean & user‑friendly experiences, I am
             passionate about building excellent software that improves the lives
