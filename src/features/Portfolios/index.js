@@ -35,7 +35,7 @@ const Portfolios = () => {
       name: "Justice support network",
       keywords: ["all", "website"],
       stacks: ["Reactjs", "Material -ui", "Redux"],
-      project_link: "",
+      project_link: "https://justicesupportnetwork.org",
       github_link: "",
       description: "This is a web application built as a role-oriented management system that allows users to request legal assistance or any other type of assistance and also allows lawyers or volunteers to select from a list of available requests, as well as allowing admin to regulate platform usage. When a request is granted, users and volunteers can message one other, upload photographs to the case, dismiss the case when both parties are satisfied with the outcome, or request the admin's assistance",
     },
