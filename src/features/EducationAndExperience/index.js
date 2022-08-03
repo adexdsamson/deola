@@ -10,28 +10,17 @@ const BackgroundExperience = () => {
   let [activeTab, setActtiveTab] = useState("carousel");
   let data = [
     {
-      company: "Oracle Christian Center O2C",
-      position: "Sound Engineer",
+      company: "Audapp",
+      position: "Frontend developer",
       content:
-        "Coordination of a team of expert sound specialists to ensure that the church has outstanding sound.",
-      duration: "2014 - 2018 ",
+        "Optimized the web application and added more features to the project.",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
     {
-      company: "FIIRO",
-      position: "Internship",
+      company: "Hillcross College",
+      position: "Frontend developer",
       content:
-        "Aided in the processing of foodstuffs into granular and preserved states, as well as the development of specialized devices to achieve a desired texture or gastronomic outcome.",
-      duration: "6 months",
-      icon: <HandIcon className="text-white/80 h-5 w-5" />,
-    },
-    {
-      company: "NIMET",
-      position: "Internship",
-      content:
-        "Aided in reading, calculating, and measuring the current state of the weather, as well as projecting meteorological consequences.",
-      duration: "2018 - 2018",
-      icon: <HandIcon className="text-white/80 h-5 w-5" />,
+        "Built a online school system for student to watch vidoes uploaded by the teacher and view, edit and download pdf directly on the web application.",
     },
     {
       company: "Alabian Solutions",

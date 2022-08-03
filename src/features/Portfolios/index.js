@@ -12,6 +12,8 @@ import {
   UberClone,
   Samanad,
   Global,
+  HillCross,
+  Audapp,
 } from "../../assets";
 import { Typography } from "../../common/shared";
 import { PortfolioImage, PortfolioModel } from "./layouts";
@@ -20,6 +22,58 @@ const Portfolios = () => {
   const [selectedKeyword, setSelectedKeyword] = useState("all");
   const [fullDetail, setFullDetail] = useState(null);
   let data = [
+    {
+      src: Audapp,
+      name: "Audapp",
+      keywords: ["all", "website"],
+      stacks: ["Reactjs", "Redux", "Tailwind-ui"],
+      project_link: "http://audapp.com/",
+      description:
+        "AudApp features a Creator Studio tool and a robust set of features that make it easy to create and promote high-quality audio content for the pleasure and growth of their listening community. ",
+    },
+    {
+      src: HillCross,
+      name: "HillCross College",
+      keywords: ["all", "website"],
+      stacks: ["Reactjs", "Redux", "Tailwind-ui"],
+      project_link: "http://online.hillcrosscollege.com/",
+      description: "An online technology school",
+    },
+    {
+      src: Shawn,
+      name: "Shawn Exchange",
+      keywords: ["all", "website"],
+      stacks: ["Reactjs", "Redux", "Tailwind-ui"],
+      project_link: "http://www.theshawnexchange.com/",
+      github_link: "",
+      description:
+        "A marketplace where you can sell cryptocurrency and gift cards to Shawn Exchange. Customers can create an account, select the commodities they want to deal with, and give transaction proof on the website. Users can also see a history of their previous transactions",
+    },
+    {
+      src: Eapay,
+      name: "Eapay",
+      keywords: ["all", "website"],
+      stacks: ["Reactjs", "Material-Ui", "Redux"],
+      project_link: "https://eapay.website",
+      github_link: "",
+      description: "",
+    },
+    {
+      src: Hootr,
+      name: "Hootr - dating app",
+      keywords: ["all", "mobile"],
+      stacks: [
+        "React Native",
+        "Expo",
+        "Firebase",
+        "Redux",
+        "Stripe api",
+        "Tailwind css",
+      ],
+      project_link: "https://expo.dev/@adexd/hootr",
+      github_link: "",
+      description: "",
+    },
     {
       src: Cruxcoh,
       name: "Cruxcohtech College",
@@ -37,7 +91,8 @@ const Portfolios = () => {
       stacks: ["Reactjs", "Material -ui", "Redux"],
       project_link: "https://justicesupportnetwork.org",
       github_link: "",
-      description: "This is a web application built as a role-oriented management system that allows users to request legal assistance or any other type of assistance and also allows lawyers or volunteers to select from a list of available requests, as well as allowing admin to regulate platform usage. When a request is granted, users and volunteers can message one other, upload photographs to the case, dismiss the case when both parties are satisfied with the outcome, or request the admin's assistance",
+      description:
+        "This is a web application built as a role-oriented management system that allows users to request legal assistance or any other type of assistance and also allows lawyers or volunteers to select from a list of available requests, as well as allowing admin to regulate platform usage. When a request is granted, users and volunteers can message one other, upload photographs to the case, dismiss the case when both parties are satisfied with the outcome, or request the admin's assistance",
     },
     {
       src: Samanad,
@@ -46,7 +101,8 @@ const Portfolios = () => {
       stacks: ["Reactjs", "Bootstrap"],
       project_link: "https://samanad-solar.web.app/",
       github_link: "",
-      description: "A single web page to display information about Samanad solar business",
+      description:
+        "A single web page to display information about Samanad solar business",
     },
     {
       src: Global,
@@ -73,7 +129,8 @@ const Portfolios = () => {
       stacks: ["Material-ui", "Firebase", "Redux", "Reactjs"],
       project_link: "https://cream-bakery.firebaseapp.com",
       github_link: "creambakery",
-      description: "A single-page application for a bakery business that allows site visitors to submit cake requests to the business's Whatsapp account",
+      description:
+        "A single-page application for a bakery business that allows site visitors to submit cake requests to the business's Whatsapp account",
     },
     {
       src: Port3,
@@ -85,37 +142,10 @@ const Portfolios = () => {
       description: "A simple chat application",
     },
     {
-      src: Shawn,
-      name: "Shawn Exchange",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Redux", "Tailwind-ui"],
-      project_link: "http://www.theshawnexchange.com/",
-      github_link: "",
-      description: "A marketplace where you can sell cryptocurrency and gift cards to Shawn Exchange. Customers can create an account, select the commodities they want to deal with, and give transaction proof on the website. Users can also see a history of their previous transactions",
-    },
-    {
-      src: Eapay,
-      name: "Eapay",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Material-Ui", "Redux", ],
-      project_link: "https://eapay.website",
-      github_link: "",
-      description: "",
-    },
-    {
-      src: Hootr,
-      name: "Hootr - dating app",
-      keywords: ["all", "mobile"],
-      stacks: ["React Native", "Expo", "Firebase", "Redux", "Stripe api", "Tailwind css" ],
-      project_link: "https://expo.dev/@adexd/hootr",
-      github_link: "",
-      description: "",
-    },
-    {
       src: Communique,
       name: "Communique - chatting app",
       keywords: ["all", "mobile"],
-      stacks: ["React Native", "Expo", "Firebase", "Redux", ],
+      stacks: ["React Native", "Expo", "Firebase", "Redux"],
       project_link: "https://expo.dev/@adexd/communique",
       github_link: "",
       description: "",
@@ -124,10 +154,11 @@ const Portfolios = () => {
       src: UberClone,
       name: "Uber clone app",
       keywords: ["all", "mobile"],
-      stacks: ["React Native", "Expo", "Google api", ],
+      stacks: ["React Native", "Expo", "Google api"],
       project_link: "https://expo.dev/@adexd/uber_clone",
       github_link: "",
-      description: "A simple Uber clone that retrieves a position from Google Geolocation API and computes the distance matrix from origin to destination, as well as displaying map distance",
+      description:
+        "A simple Uber clone that retrieves a position from Google Geolocation API and computes the distance matrix from origin to destination, as well as displaying map distance",
     },
   ];
   let keywords = ["all", "website", "mobile"];
