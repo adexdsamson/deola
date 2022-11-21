@@ -3,7 +3,7 @@ import { Typography } from "../../../common/shared";
 
 const SliderComponent = ({ data }) => {
   return (
-    <ul className="overflow-x-auto w-full h-83 items-center flex gap-8 snap-x">
+    <ul className="overflow-x-auto w-full items-center flex flex-wrap gap-8 snap-x">
       {data.map(({ company, position, content, duration, icon }, i) => (
         <li key={i} className="snap-center">
           <div className="shadow-lg rounded-xl h-52 w-72 max-w-[40vw] md:w-96 p-4 bg-gray-700 relative overflow-hidden">

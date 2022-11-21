@@ -40,25 +40,6 @@ const Portfolios = () => {
       description: "An online technology school",
     },
     {
-      src: Shawn,
-      name: "Shawn Exchange",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Redux", "Tailwind-ui"],
-      project_link: "http://www.theshawnexchange.com/",
-      github_link: "",
-      description:
-        "A marketplace where you can sell cryptocurrency and gift cards to Shawn Exchange. Customers can create an account, select the commodities they want to deal with, and give transaction proof on the website. Users can also see a history of their previous transactions",
-    },
-    {
-      src: Eapay,
-      name: "Eapay",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Material-Ui", "Redux"],
-      project_link: "https://eapay.website",
-      github_link: "",
-      description: "",
-    },
-    {
       src: Hootr,
       name: "Hootr - dating app",
       keywords: ["all", "mobile"],
@@ -75,82 +56,6 @@ const Portfolios = () => {
       description: "",
     },
     {
-      src: Cruxcoh,
-      name: "Cruxcohtech College",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Material-ui", "Redux"],
-      project_link: "",
-      github_link: "",
-      description:
-        "A web app for a nursing college that displays information about the college and provides updates such as blogs and important updates. To upload those details, use the platform as an admin platform",
-    },
-    {
-      src: Jsn,
-      name: "Justice support network",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Material -ui", "Redux"],
-      project_link: "https://justicesupportnetwork.org",
-      github_link: "",
-      description:
-        "This is a web application built as a role-oriented management system that allows users to request legal assistance or any other type of assistance and also allows lawyers or volunteers to select from a list of available requests, as well as allowing admin to regulate platform usage. When a request is granted, users and volunteers can message one other, upload photographs to the case, dismiss the case when both parties are satisfied with the outcome, or request the admin's assistance",
-    },
-    {
-      src: Samanad,
-      name: "Samanad solar",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs", "Bootstrap"],
-      project_link: "https://samanad-solar.web.app/",
-      github_link: "",
-      description:
-        "A single web page to display information about Samanad solar business",
-    },
-    {
-      src: Global,
-      name: "global investment",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs"],
-      project_link: "https://global-forex-investment-cf594.web.app/",
-      github_link: "",
-      description: "A single web page ",
-    },
-    {
-      src: Port2,
-      name: "Admin web app",
-      keywords: ["all", "website"],
-      stacks: ["Reactjs"],
-      project_link: "",
-      github_link: "creamBakeryAdmin",
-      description: "An admin part for the cream bakery",
-    },
-    {
-      src: Cream,
-      name: "Cream Bakery",
-      keywords: ["all", "website"],
-      stacks: ["Material-ui", "Firebase", "Redux", "Reactjs"],
-      project_link: "https://cream-bakery.firebaseapp.com",
-      github_link: "creambakery",
-      description:
-        "A single-page application for a bakery business that allows site visitors to submit cake requests to the business's Whatsapp account",
-    },
-    {
-      src: Port3,
-      name: "Curly chat",
-      keywords: ["all", "website"],
-      stacks: ["Nodejs", "Ejs", "Express", "Bootstrap"],
-      project_link: "",
-      github_link: "curlchat",
-      description: "A simple chat application",
-    },
-    {
-      src: Communique,
-      name: "Communique - chatting app",
-      keywords: ["all", "mobile"],
-      stacks: ["React Native", "Expo", "Firebase", "Redux"],
-      project_link: "https://expo.dev/@adexd/communique",
-      github_link: "",
-      description: "",
-    },
-    {
       src: UberClone,
       name: "Uber clone app",
       keywords: ["all", "mobile"],
@@ -162,9 +67,11 @@ const Portfolios = () => {
     },
   ];
   let keywords = ["all", "website", "mobile"];
+
   const filteredPortfolios = data.filter((item) =>
     item.keywords.includes(selectedKeyword)
   );
+  
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-black">
       <div className="text-center mt-20">
@@ -174,7 +81,7 @@ const Portfolios = () => {
           className={"font-bold"}
           uppercase
         >
-          My <span className="text-green-400">Portfolios</span>
+          Recent <span className="text-green-400">Portfolios</span>
         </Typography>
       </div>
       <div className="flex items-center justify-center mt-2">

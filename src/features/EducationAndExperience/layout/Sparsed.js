@@ -18,7 +18,7 @@ const SparedComponent = ({ data }) => {
                     variant={"subheader1"}
                     color={"white"}
                   >
-                    {data[0].company}
+                    {data?.[0]?.company}
                   </Typography>
                 </div>
                 <div className="flex py-1 items-center">
@@ -29,19 +29,23 @@ const SparedComponent = ({ data }) => {
                       variant={"small"}
                       color={"white"}
                     >
-                      {data[0].position}
+                      {data?.[0]?.position}
                     </Typography>{" "}
                     -
                   </div>
                   <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[0].duration}
+                    {data?.[0]?.duration}
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[0].content}
+              <Typography
+                capitalize
+                variant={"body2"}
+                className={"text-white/60"}
+              >
+                {data?.[0]?.content}
               </Typography>
             </div>
             <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
@@ -65,7 +69,7 @@ const SparedComponent = ({ data }) => {
                     variant={"subheader1"}
                     color={"white"}
                   >
-                    {data[1].company}
+                    {data?.[1]?.company}
                   </Typography>
                 </div>
                 <div className="flex py-1 items-center">
@@ -76,19 +80,23 @@ const SparedComponent = ({ data }) => {
                       variant={"small"}
                       color={"white"}
                     >
-                      {data[1].position}
+                      {data?.[1]?.position}
                     </Typography>{" "}
                     -
                   </div>
                   <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[1].duration}
+                    {data?.[1]?.duration}
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[1].content}
+              <Typography
+                capitalize
+                variant={"body2"}
+                className={"text-white/60"}
+              >
+                {data?.[1]?.content}
               </Typography>
             </div>
             <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
@@ -112,7 +120,7 @@ const SparedComponent = ({ data }) => {
                     variant={"subheader1"}
                     color={"white"}
                   >
-                    {data[2].company}
+                    {data?.[2]?.company}
                   </Typography>
                 </div>
                 <div className="flex py-1 items-center">
@@ -128,14 +136,18 @@ const SparedComponent = ({ data }) => {
                     -
                   </div>
                   <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[2].duration}
+                    {data?.[2]?.duration}
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[2].content}
+              <Typography
+                capitalize
+                variant={"body2"}
+                className={"text-white/60"}
+              >
+                {data?.[2]?.content}
               </Typography>
             </div>
             <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
@@ -159,7 +171,7 @@ const SparedComponent = ({ data }) => {
                     variant={"subheader1"}
                     color={"white"}
                   >
-                    {data[3].company}
+                    {data?.[3]?.company}
                   </Typography>
                 </div>
                 <div className="flex py-1 items-center">
@@ -170,19 +182,23 @@ const SparedComponent = ({ data }) => {
                       variant={"small"}
                       color={"white"}
                     >
-                      {data[3].position}
+                      {data?.[3]?.position}
                     </Typography>{" "}
                     -
                   </div>
                   <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[3].duration}
+                    {data?.[3]?.duration}
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[3].content}
+              <Typography
+                capitalize
+                variant={"body2"}
+                className={"text-white/60"}
+              >
+                {data?.[3]?.content}
               </Typography>
             </div>
             <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
@@ -206,7 +222,7 @@ const SparedComponent = ({ data }) => {
                     variant={"subheader1"}
                     color={"white"}
                   >
-                    {data[4].company}
+                    {data?.[4]?.company}
                   </Typography>
                 </div>
                 <div className="flex py-1 items-center">
@@ -217,66 +233,23 @@ const SparedComponent = ({ data }) => {
                       variant={"small"}
                       color={"white"}
                     >
-                      {data[4].position}
+                      {data?.[4]?.position}
                     </Typography>{" "}
                     -
                   </div>
                   <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[4].duration}
+                    {data?.[4]?.duration}
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[4].content}
-              </Typography>
-            </div>
-            <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">
-              <div className="w-full h-full text-center text-xs text-white bg-green-400 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute top-60 right-0 shadow-lg shadow-current">
-        <div className="shadow-lg rounded-xl h-52 w-80 p-4 bg-gray-700 relative overflow-hidden">
-          <div href="#" className="w-full h-full block">
-            <div className="flex items-center border-b-2 mb-2 py-2">
-              <div className="h-3 w-3 absolute top-2 bg-green-400 rounded-full"></div>
-              <div className="h-3 w-3 absolute top-2 right-4 bg-green-400 rounded-full"></div>
-              <div className="pl-3">
-                <div className="font-medium">
-                  <Typography
-                    capitalize
-                    className="font-medium"
-                    variant={"subheader1"}
-                    color={"white"}
-                  >
-                    {data[5].company}
-                  </Typography>
-                </div>
-                <div className="flex py-1 items-center">
-                  <div className="text-gray-600 text-sm">
-                    <Typography
-                      capitalize
-                      className=""
-                      variant={"small"}
-                      color={"white"}
-                    >
-                      {data[5].position}
-                    </Typography>{" "}
-                    -
-                  </div>
-                  <div className="text-gray-600 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                    {data[5].duration}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full p-4">
-              <Typography capitalize variant={"body2"} className={'text-white/60'}>
-                {data[5].content}
+              <Typography
+                capitalize
+                variant={"body2"}
+                className={"text-white/60"}
+              >
+                {data?.[4]?.content}
               </Typography>
             </div>
             <div className="w-full h-2 bg-green-200 rounded-full absolute bottom-2 right-1 left-1">

@@ -18,6 +18,9 @@ const About = () => {
     { title: "email", value: "adexdsamson@gmail.com" },
     { title: "language", value: "yoruba, english" },
   ];
+
+
+
   return (
     <section className="h-full overflow-hidden bg-black scrollbar-hide">
       <div className="text-center mt-20">
@@ -139,6 +142,7 @@ const About = () => {
               years of experience
             </Typography>
           </div>
+          
           <div className="h-28 w-40 lg:h-40 lg:w-64 border lg:float-right border-gray-500 lg:mr-14 p-5 px-8 lg:mt-5 rounded">
             <Typography
               className={

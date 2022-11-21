@@ -27,25 +27,15 @@ const BackgroundExperience = () => {
       position: "Frontend",
       content:
         "Aided in the development of a number of companies' client websites, as well as the design of several websites using Figma.",
-      duration: "2021 - present",
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
     },
-    {
-      company: "Pottershub network",
-      position: "Team lead",
-      content:
-        "Aided in the development of a number of companies' client websites with group of developers.",
-      duration: "2022 - present",
-      icon: <HandIcon className="text-white/80 h-5 w-5" />,
-    },
-    {
-      company: "Funaab",
-      position: "Bachelor Degree",
-      content:
-        "Attended the Federal University of Agriculture Abeokuta and majored in Physics.",
-      duration: "2014 - 2018",
-      icon: <BookOpenIcon className="text-white/80 h-5 w-5" />,
-    },
+    // {
+    //   company: "Pottershub network",
+    //   position: "Team lead",
+    //   content:
+    //     "Aided in the development of a number of companies' client websites with group of developers.",
+    //   icon: <HandIcon className="text-white/80 h-5 w-5" />,
+    // },
 
     // { company: "", position: "", content: "", duration: "" },
   ];
@@ -58,7 +48,7 @@ const BackgroundExperience = () => {
           className={"font-bold"}
           uppercase
         >
-          Experience & <span className="text-green-400">Education</span>
+          Recent Experience 
         </Typography>
       </div>
       <div className="hidden lg:block">
@@ -76,7 +66,7 @@ const BackgroundExperience = () => {
           >
             Carousel
           </Typography>
-          <Typography
+          {/* <Typography
             {...{
               variant: "body1",
               className: `transition ease-in-out mx-1 ${
@@ -88,19 +78,21 @@ const BackgroundExperience = () => {
             }}
           >
             Sparse
-          </Typography>
+          </Typography> */}
         </div>
-        <div className="grid grid-cols-1 gap-10 mt-14 px-20">
+
+        <div className="mt-14 px-20">
           <Fade when={activeTab === "carousel"} left>
             {activeTab === "carousel" && <Carousel {...{ data }} />}
           </Fade>
-          <Fade when={activeTab === "sparsed"} right>
+          {/* <Fade when={activeTab === "sparsed"} right>
             {activeTab === "sparsed" && <Sparsed {...{ data }} />}
-          </Fade>
+          </Fade> */}
         </div>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 px-8 lg:hidden md:px-16 pb-10">
-        {data.map(({ company, position, content, duration, icon }, i) => (
+        {data.map(({ company, position, content, icon }, i) => (
           <li key={i} className="snap-center">
             <div className="shadow-lg rounded-xl h-52 w-full p-4 bg-gray-700 relative overflow-hidden">
               <a href="#" className="w-full h-full block">
@@ -130,11 +122,11 @@ const BackgroundExperience = () => {
                         >
                           {position}
                         </Typography>{" "}
-                        -
+                     
                       </div>
-                      <div className="text-gray-700 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
+                      {/* <div className="text-gray-700 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
                         {duration}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
