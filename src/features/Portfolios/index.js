@@ -1,19 +1,11 @@
 import { useState } from "react";
 import {
-  Communique,
-  Cruxcoh,
-  Eapay,
   Hootr,
-  Jsn,
-  Cream,
-  Port2,
-  Port3,
-  Shawn,
   UberClone,
-  Samanad,
-  Global,
   HillCross,
   Audapp,
+  Herfession,
+  HerfessionWeb
 } from "../../assets";
 import { Typography } from "../../common/shared";
 import { PortfolioImage, PortfolioModel } from "./layouts";
@@ -65,7 +57,28 @@ const Portfolios = () => {
       description:
         "A simple Uber clone that retrieves a position from Google Geolocation API and computes the distance matrix from origin to destination, as well as displaying map distance",
     },
+    {
+      src: Herfession,
+      name: "Herfession",
+      keywords: ["all", "mobile"],
+      stacks: ["React Native", "Expo", "Firebase"],
+      project_link:
+        "https://play.google.com/store/apps/details?id=com.thrmedia.herfessionsapp",
+      github_link: "",
+      description: "Built with expo-audio, firebase ",
+    },
+    {
+      src: HerfessionWeb,
+      name: "Herfession expert web app",
+      keywords: ["all", "website"],
+      stacks: ["ReactJs", "Tailwind", "Firebase", "Redux", "Redux-toolkits"],
+      project_link: "https://herfession-expert.firebaseapp.com/",
+      github_link: "",
+      description: "Built with reactjs firebase redux "
+    },
   ];
+
+
   let keywords = ["all", "website", "mobile"];
 
   const filteredPortfolios = data.filter((item) =>
