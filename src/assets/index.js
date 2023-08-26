@@ -6,14 +6,20 @@ import HillCross from "./portfolio/hillcross.png";
 import Audapp from "./portfolio/Audapp.png";
 import Herfession from './portfolio/herfession-app.png';
 import HerfessionWeb from './portfolio/herfession-web.png';
+import AutogonAI from './portfolio/autogon.png';
+import Ulego from './portfolio/ulego.png';
+import Eapay from './portfolio/Eapay.png';
 
 export {
   Pic,
   Pic1,
+  Ulego,
   Hootr,
   UberClone,
   HillCross,
   Audapp,
+  Eapay,
+  AutogonAI,
   Herfession,
   HerfessionWeb
 };

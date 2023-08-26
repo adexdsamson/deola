@@ -22,7 +22,7 @@ const GET_USER_ARTICLES = `
 const BlogSection = () => {
   const [gql, { data, isLoading, isError }] = useGetHashNodeBlogsMutation();
   const posts = data?.data?.user?.publication?.posts;
-  console.log(posts);
+  // console.log(posts);
   let articles = posts?.length ? posts : [];
 
   useEffect(() => {
@@ -35,14 +35,14 @@ const BlogSection = () => {
         <Typography
           variant="h2"
           color="white"
-          className={"font-bold"}
+          className={"font-bold text-secondary"}
           uppercase
         >
-          My <span className="text-green-400">Blogs</span>
+          My <span className="text-primary">Blogs</span>
         </Typography>
       </div>
       {!isLoading && (
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-14 lg:px-20 px-8 pb-10 lg:pb-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-14 lg:px-20 px-8 pb-10 lg:pb-0">
           {articles.map(({ coverImage, title, slug, brief }, key) => (
             <BlogCard {...{ coverImage, slug, title, body: brief, key }} />
           ))}

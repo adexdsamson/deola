@@ -36,7 +36,7 @@ const Skills = () => {
     },
     {
       skill: "react",
-      progress: "80",
+      progress: "90",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7V3AIISY1irgSFCmxWXK5TLNan8gFuOO_AYxbJv2&s",
     },
     {
@@ -51,12 +51,12 @@ const Skills = () => {
     },
     {
       skill: "redux",
-      progress: "80",
+      progress: "90",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmY2vDZRg0yFcDtTaQDp1GIfKD2hcEGSLWB0Ym41gBQ&s",
     },
     {
       skill: "figma",
-      progress: "30",
+      progress: "40",
       img: "https://s3-alpha.figma.com/hub/file/697598809/ce5e0bb3-16b9-4d88-9bca-7d237fe725a8-cover.png",
     },
     {
@@ -73,20 +73,24 @@ const Skills = () => {
         <Typography
           variant="h2"
           color="white"
-          className={"font-bold"}
+          className={"font-bold text-secondary"}
           uppercase
         >
-          My <span className="text-green-400">Skills</span>
+          My <span className="text-primary">Skills</span>
         </Typography>
       </div>
       <div className="flex flex-wrap items-center justify-center px-10">
         {data.map(({ skill, progress, img }, i) => (
           <div
             key={i}
-            className="h-32 w-83 my-3 flex bg-green-800 rounded-md gap-2 lg:mx-2 px-5 py-5"
+            className="h-32 w-83 my-3 flex bg-primary/30 rounded-md gap-2 lg:mx-2 px-5 py-5"
           >
             <div className="h-full w-28 rounded-md ">
-              <img src={img} alt={skill} className="h-full w-full rounded-md object-cover" />
+              <img
+                src={img}
+                alt={skill}
+                className="h-full w-full rounded-md object-cover"
+              />
             </div>
             <div className="w-full">
               <div className="flex items-center justify-between w-full">
@@ -104,10 +108,10 @@ const Skills = () => {
               </div>
               <Typography variant="body2">Front End</Typography>
 
-              <div className="w-full bg-white rounded-lg h-3 mt-7 relative">
+              <div className="w-full bg-secondary rounded-lg h-3 mt-7 relative">
                 <div
                   style={{ width: `${progress}%` }}
-                  className={`h-full absolute bg-green-300 rounded-lg`}
+                  className={`h-full absolute bg-primary rounded-lg`}
                 />
               </div>
             </div>

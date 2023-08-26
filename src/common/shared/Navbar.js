@@ -50,13 +50,13 @@ const Navbar = () => {
         <Link {...{ key }} className="relative" to={item?.link}>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer  ${
-              location.pathname === item.link ? "bg-green-400 animate-pings" : "bg-transparent"
+              location.pathname === item.link ? "bg-primary animate-pings" : "bg-transparent"
             } absolute lg:top-0 top-0`}
           ></div>
           <div
             className={`h-10 w-10 rounded-full cursor-pointer flex items-center justify-center ${
-              location.pathname === item.link ? "bg-green-400 text-white/80" : "bg-gray-700 text-gray-500"
-            } relative my-4 mt-2 hover:border-2 hover:border-green-400 group`}
+              location.pathname === item.link ? "bg-primary text-white/80" : "bg-secondary text-primary"
+            } relative my-4 mt-2 hover:border-2 hover:border-primary group`}
           >
             {item?.icon}
           </div>

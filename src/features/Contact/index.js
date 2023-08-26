@@ -20,38 +20,42 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+
   let data = [
     {
-      icon: <FaFacebookF className="text-white h-4 w-4" />,
+      icon: <FaFacebookF className="text-primary h-4 w-4" />,
       link: "https://www.facebook.com/samsonadeola94",
     },
     {
-      icon: <FaTwitter className="text-white h-4 w-4" />,
+      icon: <FaTwitter className="text-primary h-4 w-4" />,
       link: "https://www.twitter.com",
     },
     {
-      icon: <FaLinkedinIn className="text-white h-4 w-4" />,
+      icon: <FaLinkedinIn className="text-primary h-4 w-4" />,
       link: "https://www.linkedin.com/in/adeolasadediran/",
     },
     {
-      icon: <FaInstagram className="text-white h-4 w-4" />,
+      icon: <FaInstagram className="text-primary h-4 w-4" />,
       link: "https://www.instagram.com/diran_deola",
     },
     {
-      icon: <FaGithub className="text-white h-4 w-4" />,
+      icon: <FaGithub className="text-primary h-4 w-4" />,
       link: "https://github.com/adexdsamson",
     },
   ];
+
+
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-black">
       <div className="text-center mt-20">
         <Typography
           variant="h2"
           color="white"
-          className={"font-bold"}
+          className={"font-bold text-secondary"}
           uppercase
         >
-          Get in <span className="text-green-400">Touch</span>
+          Get in <span className="text-primary">Touch</span>
         </Typography>
       </div>
       <div className="lg:flex items-center justify-center gap-10 mt-14 lg:px-20 px-8 pb-10 lg:pb-0">
@@ -59,7 +63,7 @@ const ContactUs = () => {
           <Typography
             variant="h4"
             color="white"
-            className={"font-bold"}
+            className={"font-bold text-secondary"}
             uppercase
           >
             DON'T BE SHY !
@@ -76,13 +80,13 @@ const ContactUs = () => {
           <div>
             <div className="flex gap-5 mt-9">
               <div className="">
-                <LocationMarkerIcon className="text-green-400 h-10 w-10" />
+                <LocationMarkerIcon className="text-primary h-10 w-10" />
               </div>
               <div>
                 <Typography
                   variant="subheader2"
                   color="white"
-                  className={"font-bold"}
+                  className={"font-bold text-secondary"}
                   uppercase
                 >
                   Address point
@@ -98,13 +102,13 @@ const ContactUs = () => {
             </div>
             <div className="flex gap-5 mt-7">
               <div className="">
-                <MailIcon className="text-green-400 h-10 w-10" />
+                <MailIcon className="text-primary h-10 w-10" />
               </div>
               <div>
                 <Typography
                   variant="subheader2"
                   color="white"
-                  className={"font-bold"}
+                  className={"font-bold text-secondary"}
                   uppercase
                 >
                   mail me
@@ -120,13 +124,13 @@ const ContactUs = () => {
             </div>
             <div className="flex gap-5 mt-7">
               <div className="">
-                <PhoneIcon className="text-green-400 h-10 w-10" />
+                <PhoneIcon className="text-primary h-10 w-10" />
               </div>
               <div>
                 <Typography
                   variant="subheader2"
                   color="white"
-                  className={"font-bold"}
+                  className={"font-bold text-secondary"}
                   uppercase
                 >
                   call me
@@ -146,7 +150,7 @@ const ContactUs = () => {
               <a href={item.link}>
                 <div
                   key={i}
-                  className="w-8 h-8 bg-gray-700 flex items-center justify-center rounded-full"
+                  className="w-8 h-8 bg-secondary flex items-center justify-center rounded-full"
                 >
                   {item.icon}
                 </div>

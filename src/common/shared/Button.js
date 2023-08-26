@@ -14,9 +14,9 @@ const Button = ({
   return (
     <Component
       {...button}
-      className={`h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-green-600 group border-r-0 overflow-hidden ${className}`}
+      className={`h-12 w-48 rounded-full cursor-pointer border flex items-center relative border-primary group border-r-0 overflow-hidden ${className}`}
     >
-      <span className="absolute w-0 group-hover:w-full h-full transition-all ease-out duration-700 top-0 left-0 rounded-full bg-green-600 rotate-45"></span>
+      <span className="absolute w-0 group-hover:w-full h-full transition-all ease-out duration-700 top-0 left-0 rounded-full bg-primary rotate-45"></span>
       <Typography
         variant="small"
         uppercase
@@ -26,7 +26,7 @@ const Button = ({
         {text}
       </Typography>
       <div
-        className={`h-11 w-11 rounded-full cursor-pointer flex items-center justify-center absolute right-0 top-0.5 bg-green-600 hover:drop-shadow-lg ${iconClassName}`}
+        className={`h-11 w-11 rounded-full cursor-pointer flex items-center justify-center absolute right-0 top-0.5 bg-primary hover:drop-shadow-lg ${iconClassName}`}
       >
         {icon}
       </div>
