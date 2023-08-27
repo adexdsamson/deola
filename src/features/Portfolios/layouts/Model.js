@@ -1,6 +1,8 @@
 import { Typography } from "../../../common/shared";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Transition } from "@tailwindui/react";
+import { useRef } from "react";
+import { useOnClickOutside } from 'usehooks-ts';
 
 const PortfolioModel = ({
   open,
@@ -12,6 +14,12 @@ const PortfolioModel = ({
   github_link,
   description,
 }) => {
+  const ref = useRef();
+
+  useOnClickOutside(ref, () => {
+    onClose();
+  })
+
   return (
     <Transition
       show={open}
@@ -25,7 +33,6 @@ const PortfolioModel = ({
       <div
         className={`fixed z-50 inset-0 overflow-y-auto`}
         role="dialog"
-        onClick={onClose}
         aria-modal="true"
       >
         <div className="flex min-h-screen text-center md:block md:px-2 lg:px-4">
@@ -40,8 +47,10 @@ const PortfolioModel = ({
             &#8203;
           </span>
 
-          <div className="flex text-base text-left transform transition w-full md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-3xl h-98">
-
+          <div
+            ref={ref}
+            className="flex text-base text-left transform transition w-full md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-3xl h-98"
+          >
             <div className="w-full relative grid lg:grid-cols-2 bg-primary rounded-xl px-4 pt-14 pb-8 overflow-hidden shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 h-full">
               <div className="p-5">
                 <img
@@ -50,7 +59,6 @@ const PortfolioModel = ({
                   alt={title}
                 />
               </div>
-
 
               <div className="p-5 overflow-x-auto">
                 <div>
