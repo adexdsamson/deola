@@ -39,10 +39,10 @@ const Navbar = () => {
       link: CONTACT_US_ROUTE,
       icon: <MailIcon className="group-hover:text-white/80 h-5 w-5" />,
     },
-    {
-      link: BLOG_ROUTE,
-      icon: <NewspaperIcon className="group-hover:text-white/80 h-5 w-5" />,
-    },
+    // {
+    //   link: BLOG_ROUTE,
+    //   icon: <NewspaperIcon className="group-hover:text-white/80 h-5 w-5" />,
+    // },
   ];
   return (
     <ul className="">

@@ -11,45 +11,70 @@ const BackgroundExperience = () => {
 
   let data = [
     {
-      company: "Audapp",
-      position: "Frontend developer",
-      content:
-        "AudApp is Africa’s social audio entertainment platform created to tell African stories and share African experiences.",
+      company: "Autogon.ai",
+      position: "Frontend Team Lead",
+      duration: "Jan 2023 – Present",
+      highlights: [
+        "Lead frontend architecture for AI-powered platform, managing team of 3 developers",
+        "Built visual flow editor with React, Redux Toolkit, React Flow and DnD",
+        "Integrated Stripe subscriptions reducing payment friction by 35%",
+        "Implemented secure OAuth auth with Google and GitHub",
+        "Established real-time error monitoring with Sentry reducing downtime by 60%",
+      ],
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      tags: ["React", "Redux Toolkit", "OAuth", "Sentry", "Stripe"],
     },
     {
-      company: "Hillcross College",
-      position: "Frontend developer",
-      content:
-        "HillCross College is an institution of higher learning dedicated to human development with the intention to impact positively on community and national development within the global space.",
+      company: "Eapay",
+      position: "Senior Mobile Developer",
+      duration: "May 2022 – Present",
+      highlights: [
+        "Architected cross-platform fintech app with React Native and WebSocket",
+        "Migrated state from Context to Redux Toolkit, 25% faster app launch",
+        "Implemented secure payments incl. contact transfers and QR merchant",
+        "Built custom UI library optimized for iOS and Android",
+      ],
+      icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      tags: ["React Native", "Redux Toolkit", "WebSocket", "Security"],
     },
     {
-      company: "Alabian Solutions",
-      position: "Frontend",
-      content:
-        "Alabian is a web solution provision firm based in Lagos with expertise in web development, mobile app development, web hosting, digital marketing and other value added services. ",
+      company: "OrbiPayX (Contract)",
+      position: "Senior Frontend Engineer",
+      duration: "2021 – Present",
+      highlights: [
+        "Architected compliance dashboard with React 18 and TypeScript",
+        "Implemented AES-GCM encryption across API payloads",
+        "Developed granular RBAC with role-based permissions",
+        "Optimized high-volume logs with TanStack Query and Zustand",
+      ],
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      tags: ["React", "TypeScript", "AES-GCM", "RBAC"],
     },
     {
-      company: "Eapay Financial Technology",
-      position: "Frontend",
-      content:
-        "Eapay is a financial application that enable users to send money and receive money through users' phone number and also helps merchant receive payment through QRcode in Nigeria.",
+      company: "Gidaah (Contract)",
+      position: "Senior Frontend Engineer",
+      duration: "2021 – Present",
+      highlights: [
+        "Delivered Next.js 15 app with SSR/ISR for performance",
+        "Type-safe API layer with React Query and centralized auth",
+        "Integrated Stripe and Veriff identity verification",
+        "Established automated tests with Jest and Playwright",
+      ],
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      tags: ["Next.js", "React Query", "Stripe", "SSR/ISR"],
     },
     {
-      company: "Nupat Technology",
-      position: "Frontend",
-      content:
-        "Ulego (subsidiary of Nupat Technology) is a fintech application that runs on both iOS and Android to provide users with banking experience revolving around day-to-day transactions, interacting with third party services such as airtime and utility services, and P2P.",
+      company: "SwiftPro (Contract)",
+      position: "Senior Frontend Engineer",
+      duration: "2021 – Present",
+      highlights: [
+        "Led SPA architecture with React + TypeScript",
+        "Route guards and role-based navigation for secure access",
+        "Centralized HTTP layer with React Query",
+        "Playwright test coverage and performance benchmarks",
+      ],
       icon: <HandIcon className="text-white/80 h-5 w-5" />,
-    },
-    {
-      company: "Autogon AI",
-      position: "Frontend",
-      content:
-        "Autogon, the leading company in the field of artificial intelligence and machine learning. Our mission is to provide businesses with the most advanced AI-powered solutions that allow them to make data-driven decisions and stay ahead of the competition.",
-      icon: <HandIcon className="text-white/80 h-5 w-5" />,
+      tags: ["React", "TypeScript", "HTTP Layer", "Playwright"],
     },
   ];
 
@@ -63,7 +88,7 @@ const BackgroundExperience = () => {
           className={"font-bold text-secondary"}
           uppercase
         >
-          Recent Experience 
+          Professional Experience 
         </Typography>
       </div>
       <div className="hidden lg:block">
@@ -107,21 +132,35 @@ const BackgroundExperience = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 px-8 lg:hidden md:px-16 pb-10">
-        {data.map(({ company, position, content, icon }, i) => (
+        {data.map(({ company, position, content, highlights = [], duration, icon, tags = [] }, i) => {
+          const desc =
+            Array.isArray(highlights) && highlights.length > 0
+              ? highlights.slice(0, 4).join(" ")
+              : content;
+          return (
           <li key={i} className="snap-center">
-            <div className="shadow-lg rounded-xl h-52 w-full p-4 bg-primary/30 relative overflow-hidden">
+            <div className="rounded-2xl min-h-56 w-full p-5 bg-primary/25 border border-accent/30">
               <a href="#" className="w-full h-full block">
-                <div className="flex items-center border-b-2 mb-2 py-2">
-                  <div className="h-10 w-10 bg-primary flex items-center justify-center rounded-full">
+                <div className="relative">
+                  <span className="absolute -top-3 -left-1 text-secondary/30 text-5xl leading-none select-none">
+                    “
+                  </span>
+                  <Typography variant={"body2"} className={"text-white/90 italic leading-7"}>
+                    {desc}
+                  </Typography>
+                </div>
+                <div className="flex items-center justify-between mt-4">
+                  <div className="flex items-center">
+                    <div className="h-9 w-9 bg-primary flex items-center justify-center rounded-full ring-1 ring-accent/40">
                     {" "}
                     {icon}{" "}
                   </div>
 
                   <div className="pl-3">
-                    <div>
+                    <div className="flex items-center">
                       <Typography
                         capitalize
-                        className="font-medium"
+                        className="font-semibold tracking-wide"
                         variant={"subheader1"}
                         color={"white"}
                       >
@@ -129,7 +168,7 @@ const BackgroundExperience = () => {
                       </Typography>
                     </div>
                     <div className="flex py-1 items-center">
-                      <div className="text-gray-600 text-sm">
+                      <div className="text-white/70 text-xs">
                         <Typography
                           capitalize
                           className=""
@@ -138,30 +177,36 @@ const BackgroundExperience = () => {
                         >
                           {position}
                         </Typography>{" "}
-                     
+                       
                       </div>
-                      {/* <div className="text-gray-700 rounded-full bg-green-200 px-2 py-0.5 text-sm ml-1">
-                        {duration}
-                      </div> */}
+                      
                     </div>
                   </div>
+                  </div>
+                  {duration && (
+                    <span className="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full ring-1 ring-secondary/50">
+                      {duration}
+                    </span>
+                  )}
                 </div>
-                <div className="w-full p-1">
-                  <Typography
-                    capitalize
-                    variant={"body2"}
-                    className={"text-white/60"}
-                  >
-                    {content}
-                  </Typography>
-                </div>
-                <div className="w-full h-2 bg-primary rounded-full absolute bottom-2 right-1 left-1">
-                  <div className="w-full h-full text-center text-xs text-white bg-primary rounded-full"></div>
-                </div>
+                
+                {tags.length > 0 && (
+                  <div className="w-full mt-3 flex flex-wrap gap-2">
+                    {tags.map((t, idx) => (
+                      <span
+                        key={idx}
+                        className="inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/10 text-emerald-300 text-[0.7rem] px-2 py-0.5"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </a>
             </div>
           </li>
-        ))}
+        );
+        })}
       </div>
     </div>
   );

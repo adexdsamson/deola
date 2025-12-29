@@ -5,18 +5,16 @@ import { Pic1 } from "../../assets";
 
 const About = () => {
   let LeftData = [
-    { title: "First name", value: "adeola" },
-    // { title: "age", value: new Date().getFullYear() - 1994 },
+    { title: "First name", value: "Adeola" },
     { title: "freelance", value: "available" },
-    { title: "phone", value: "08160622940" },
-    { title: "whatsApp", value: "08160622940" },
+    { title: "email", value: "adeolaadediran@email.com" },
+    { title: "linkedin", value: "linkedin.com/in/adeolaadediran" },
   ];
   let RightData = [
-    { title: "last name", value: "adediran" },
-    { title: "nationality", value: "nigeria" },
-    // { title: "address", value: "ifako gbagada" },
-    { title: "email", value: "adexdsamson@gmail.com" },
-    { title: "language", value: "yoruba, english" },
+    { title: "last name", value: "Adediran" },
+    { title: "nationality", value: "Nigeria" },
+    { title: "github", value: "github.com/adexdsamson" },
+    { title: "language", value: "English" },
   ];
 
 
@@ -115,7 +113,7 @@ const About = () => {
               }
               variant="h1"
             >
-              3
+              5
             </Typography>
             <Typography
               className={
@@ -123,7 +121,7 @@ const About = () => {
               }
               variant="h1"
             >
-              3
+              5
             </Typography>
             <Typography
               className={

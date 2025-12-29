@@ -23,7 +23,7 @@ const Homepage = () => {
           >
             I'M ADEOLA ADEDIRAN.
             <span className="block uppercase text-4xl relative -top-[15px] text-secondary">
-              frontend developer
+              senior frontend engineer
             </span>
           </Typography>
 
@@ -33,24 +33,12 @@ const Homepage = () => {
           >
             I'M ADEOLA ADEDIRAN.
             <span className="block uppercase lg:text-5xl text-xl relative -top-[3px] text-secondary">
-              frontend developer
+              senior frontend engineer
             </span>
           </Typography>
 
           <Typography className="text-white/60 lg:w-11/12 md:w-3/4 md:mx-auto mt-3 leading-8 text-center lg:text-left lg:mx-0 lg:mt-0">
-            As a mobile and web developer with over 4 years of experience, I
-            have successfully built and maintained various projects using modern
-            technologies such as React, React Native, Redux, and Tailwind CSS.
-            My passion lies in creating innovative solutions that provide a
-            seamless user experience
-            <br />
-            {"  "}
-            <br />
-            Proven leadership skills in managing and mentoring junior
-            developers. Excellent communication and teamwork skills, with the
-            ability to work effectively with cross-functional teams. I am
-            passionate about building excellent software that improves the lives
-            of those around me.
+            Senior Frontend Engineer with 5+ years of experience architecting and delivering high-impact web and mobile applications across fintech, e-commerce, and SaaS. Proven track record leading cross-functional teams, implementing enterprise-grade security, and optimizing performance to achieve faster load times and higher conversion rates. Expert in React and React Native with deep experience in state management, payment integrations, and scalable frontend architectures. Passionate about remote-first collaboration and mentoring teams to deliver exceptional user experiences.
           </Typography>
 
           <Button

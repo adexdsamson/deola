@@ -5,28 +5,28 @@ import { Typography } from "../../common/shared";
 const Skills = () => {
   let data = [
     {
-      skill: "hlml",
-      progress: "85",
+      skill: "html",
+      progress: "90",
       img: "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png",
     },
     {
       skill: "css",
-      progress: "85",
+      progress: "90",
       img: "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png",
     },
     {
       skill: "javascript",
-      progress: "85",
+      progress: "95",
       img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
     },
     {
-      skill: "bootstrap",
-      progress: "80",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png",
+      skill: "typescript",
+      progress: "85",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFC4zJmpDhVeE8mTvtvHnoiQfsCx9gCjgRzTBukGjz&s",
     },
     {
       skill: "tailwind",
-      progress: "80",
+      progress: "90",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
     },
     {
@@ -36,33 +36,48 @@ const Skills = () => {
     },
     {
       skill: "react",
-      progress: "90",
+      progress: "95",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7V3AIISY1irgSFCmxWXK5TLNan8gFuOO_AYxbJv2&s",
     },
     {
       skill: "react native",
-      progress: "80",
+      progress: "85",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7V3AIISY1irgSFCmxWXK5TLNan8gFuOO_AYxbJv2&s",
     },
     {
-      skill: "pwa",
-      progress: "80",
-      img: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pwa-icon.png",
-    },
-    {
-      skill: "redux",
+      skill: "redux toolkit",
       progress: "90",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmY2vDZRg0yFcDtTaQDp1GIfKD2hcEGSLWB0Ym41gBQ&s",
     },
     {
-      skill: "figma",
-      progress: "40",
-      img: "https://s3-alpha.figma.com/hub/file/697598809/ce5e0bb3-16b9-4d88-9bca-7d237fe725a8-cover.png",
+      skill: "zustand",
+      progress: "85",
+      img: "https://raw.githubusercontent.com/pmndrs/zustand/main/bear.png",
     },
     {
-      skill: "typescript",
-      progress: "60",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFC4zJmpDhVeE8mTvtvHnoiQfsCx9gCjgRzTBukGjz&s",
+      skill: "react query",
+      progress: "90",
+      img: "https://seeklogo.com/images/R/react-query-logo-1340EA7CE9-seeklogo.com.png",
+    },
+    {
+      skill: "stripe",
+      progress: "80",
+      img: "https://seeklogo.com/images/S/stripe-logo-F93468AC45-seeklogo.com.png",
+    },
+    {
+      skill: "graphQL",
+      progress: "75",
+      img: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+    },
+    {
+      skill: "jest",
+      progress: "80",
+      img: "https://seeklogo.com/images/J/jest-logo-F9901EBBF4-seeklogo.com.png",
+    },
+    {
+      skill: "playwright",
+      progress: "75",
+      img: "https://playwright.dev/img/playwright-logo.svg",
     },
   ];
 
